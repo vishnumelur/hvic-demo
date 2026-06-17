@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/ui/PageHeader";
 import Reveal from "@/components/ui/Reveal";
+import {
+  IconMapPin,
+  IconMail,
+  IconPhone,
+  IconArrowRight,
+} from "@/components/ui/Icons";
 import { ORG } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with Kerala HVIC Foundation — office address, email and phone.",
+  description:
+    "Get in touch with Kerala HVIC Foundation — office address, email and phone.",
 };
 
 export default function ContactPage() {
@@ -13,77 +20,175 @@ export default function ContactPage() {
     <>
       <PageHeader
         kicker="Contact"
-        title={<>Let&apos;s build the <span className="aurora-text">future together.</span></>}
-        intro="Reach out for partnerships, programmes, media or general enquiries."
+        title={
+          <>
+            Let&apos;s build the{" "}
+            <span className="accent-italic">future</span> together
+          </>
+        }
+        intro="Reach out for partnerships, programmes, media or general enquiries. Our team responds within one business day."
       />
 
-      <section className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="grid gap-6 lg:grid-cols-2">
-          <Reveal>
-            <form className="glass rounded-3xl p-8">
-              <div className="grid gap-5">
-                {[
-                  { label: "Full name", type: "text", ph: "Your name" },
-                  { label: "Email", type: "email", ph: "you@example.com" },
-                  { label: "Subject", type: "text", ph: "How can we help?" },
-                ].map((f) => (
-                  <label key={f.label} className="block">
-                    <span className="text-sm font-medium text-muted">{f.label}</span>
-                    <input
-                      type={f.type}
-                      placeholder={f.ph}
-                      className="mt-2 w-full rounded-xl border border-line bg-white/[0.03] px-4 py-3 text-fg outline-none transition-colors placeholder:text-faint focus:border-h2/60"
-                    />
-                  </label>
-                ))}
-                <label className="block">
-                  <span className="text-sm font-medium text-muted">Message</span>
-                  <textarea
-                    rows={4}
-                    placeholder="Tell us more…"
-                    className="mt-2 w-full resize-none rounded-xl border border-line bg-white/[0.03] px-4 py-3 text-fg outline-none transition-colors placeholder:text-faint focus:border-h2/60"
-                  />
-                </label>
-                <button
-                  type="button"
-                  className="btn-glow w-full rounded-xl bg-gradient-to-r from-h2 to-cyan py-3.5 font-semibold text-ink"
-                >
-                  Send message
-                </button>
-              </div>
-            </form>
-          </Reveal>
+      <section className="py-24">
+        <div className="mx-auto max-w-[1280px] px-6">
+          <div className="grid gap-8 lg:grid-cols-2">
+            {/* ── Contact Form ── */}
+            <Reveal>
+              <div className="bg-white rounded-[2rem] border border-line premium-shadow p-10">
+                <Reveal delay={60}>
+                  <p className="label-caps text-primary mb-2">Send a message</p>
+                  <h2 className="font-display text-2xl text-ink mb-8">
+                    We&apos;d love to hear from you
+                  </h2>
+                </Reveal>
 
-          <Reveal delay={120}>
-            <div className="flex h-full flex-col gap-5">
-              <div className="glass rounded-3xl p-8">
-                <h2 className="font-display text-xl font-semibold">Office</h2>
-                <div className="mt-5 space-y-4 text-muted">
-                  <p className="flex gap-3">
-                    <span className="text-h2">◷</span> {ORG.address}
-                  </p>
-                  <p className="flex gap-3">
-                    <span className="text-h2">✉</span>
-                    <a href={`mailto:${ORG.email}`} className="hover:text-h2">{ORG.email}</a>
-                  </p>
-                  <p className="flex gap-3">
-                    <span className="text-h2">☎</span>
-                    <a href={`tel:${ORG.phone}`} className="hover:text-h2">{ORG.phone}</a>
-                  </p>
+                <div className="grid gap-5">
+                  {/* Full name */}
+                  <Reveal delay={80}>
+                    <label className="block">
+                      <span className="block text-sm font-semibold text-ink mb-1.5">
+                        Full name
+                      </span>
+                      <input
+                        type="text"
+                        placeholder="Your name"
+                        className="w-full rounded-xl border border-line bg-card px-4 py-3 text-ink outline-none transition-colors placeholder:text-muted/50 focus:border-primary"
+                      />
+                    </label>
+                  </Reveal>
+
+                  {/* Email */}
+                  <Reveal delay={110}>
+                    <label className="block">
+                      <span className="block text-sm font-semibold text-ink mb-1.5">
+                        Email
+                      </span>
+                      <input
+                        type="email"
+                        placeholder="you@example.com"
+                        className="w-full rounded-xl border border-line bg-card px-4 py-3 text-ink outline-none transition-colors placeholder:text-muted/50 focus:border-primary"
+                      />
+                    </label>
+                  </Reveal>
+
+                  {/* Subject */}
+                  <Reveal delay={140}>
+                    <label className="block">
+                      <span className="block text-sm font-semibold text-ink mb-1.5">
+                        Subject
+                      </span>
+                      <input
+                        type="text"
+                        placeholder="How can we help?"
+                        className="w-full rounded-xl border border-line bg-card px-4 py-3 text-ink outline-none transition-colors placeholder:text-muted/50 focus:border-primary"
+                      />
+                    </label>
+                  </Reveal>
+
+                  {/* Message */}
+                  <Reveal delay={170}>
+                    <label className="block">
+                      <span className="block text-sm font-semibold text-ink mb-1.5">
+                        Message
+                      </span>
+                      <textarea
+                        rows={5}
+                        placeholder="Tell us more…"
+                        className="w-full resize-none rounded-xl border border-line bg-card px-4 py-3 text-ink outline-none transition-colors placeholder:text-muted/50 focus:border-primary"
+                      />
+                    </label>
+                  </Reveal>
+
+                  {/* Submit */}
+                  <Reveal delay={200}>
+                    <button
+                      type="button"
+                      className="btn-primary inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 font-semibold text-white"
+                    >
+                      Send message
+                      <IconArrowRight className="h-4 w-4" />
+                    </button>
+                  </Reveal>
                 </div>
               </div>
+            </Reveal>
 
-              <div className="glass relative flex-1 overflow-hidden rounded-3xl">
-                <iframe
-                  title="Kerala HVIC Foundation location"
-                  className="h-full min-h-64 w-full opacity-90 grayscale invert-[0.92] hue-rotate-[120deg]"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=76.93%2C8.49%2C76.97%2C8.52&layer=mapnik&marker=8.505%2C76.95"
-                />
+            {/* ── Right column: Office info + Map ── */}
+            <Reveal delay={120}>
+              <div className="flex h-full flex-col gap-6">
+                {/* Office card */}
+                <div className="bg-white rounded-[2rem] border border-line premium-shadow p-10">
+                  <p className="label-caps text-primary mb-2">Our office</p>
+                  <h2 className="font-display text-2xl text-ink mb-8">
+                    Find us in Thiruvananthapuram
+                  </h2>
+
+                  <ul className="space-y-6">
+                    {/* Address */}
+                    <li className="flex items-start gap-4">
+                      <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-card text-primary">
+                        <IconMapPin className="h-5 w-5" />
+                      </span>
+                      <div>
+                        <p className="text-sm font-semibold text-ink mb-0.5">
+                          Address
+                        </p>
+                        <p className="text-muted leading-relaxed">
+                          {ORG.address}
+                        </p>
+                      </div>
+                    </li>
+
+                    {/* Email */}
+                    <li className="flex items-start gap-4">
+                      <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-card text-primary">
+                        <IconMail className="h-5 w-5" />
+                      </span>
+                      <div>
+                        <p className="text-sm font-semibold text-ink mb-0.5">
+                          Email
+                        </p>
+                        <a
+                          href={`mailto:${ORG.email}`}
+                          className="text-muted transition-colors hover:text-primary"
+                        >
+                          {ORG.email}
+                        </a>
+                      </div>
+                    </li>
+
+                    {/* Phone */}
+                    <li className="flex items-start gap-4">
+                      <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-card text-primary">
+                        <IconPhone className="h-5 w-5" />
+                      </span>
+                      <div>
+                        <p className="text-sm font-semibold text-ink mb-0.5">
+                          Phone
+                        </p>
+                        <a
+                          href={`tel:${ORG.phone}`}
+                          className="text-muted transition-colors hover:text-primary"
+                        >
+                          {ORG.phone}
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Map card */}
+                <div className="flex-1 overflow-hidden rounded-[2rem] border border-line min-h-64">
+                  <iframe
+                    title="Kerala HVIC Foundation location"
+                    loading="lazy"
+                    className="h-full min-h-64 w-full"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=76.93%2C8.49%2C76.97%2C8.52&layer=mapnik&marker=8.505%2C76.95"
+                  />
+                </div>
               </div>
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
         </div>
       </section>
     </>

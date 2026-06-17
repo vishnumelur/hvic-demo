@@ -10,22 +10,18 @@ export default function PageHeader({
   intro?: string;
 }) {
   return (
-    <header className="relative overflow-hidden pt-40 pb-16">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(60%_100%_at_50%_-10%,rgba(0,224,138,0.16),transparent_70%)]" />
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+    <header className="hero-glow relative overflow-hidden pt-36 pb-14">
+      <div className="mx-auto max-w-[1280px] px-6">
         <Reveal>
-          <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-h2">
-            <span className="h-px w-8 bg-h2" />
-            {kicker}
-          </p>
+          <p className="label-caps text-primary">{kicker}</p>
         </Reveal>
         <Reveal delay={80}>
-          <h1 className="mt-5 max-w-4xl font-display text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl">
+          <h1 className="mt-4 max-w-4xl font-display text-5xl font-extrabold tracking-tight text-ink sm:text-6xl">
             {title}
           </h1>
         </Reveal>
         {intro && (
-          <Reveal delay={160}>
+          <Reveal delay={150}>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">{intro}</p>
           </Reveal>
         )}

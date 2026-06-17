@@ -1,76 +1,54 @@
 import Link from "next/link";
-import { NAV, ORG } from "@/lib/content";
+import { ORG } from "@/lib/content";
 import Logo from "@/components/ui/Logo";
+
+const COLS: { head: string; links: [string, string][] }[] = [
+  { head: "Strategy", links: [["Roadmap", "/programmes"], ["Policy Framework", "/about"]] },
+  { head: "Ecosystem", links: [["Projects", "/gallery"], ["News & ESG", "/news"]] },
+  { head: "Contact", links: [["Tenders & Careers", "/tenders"], ["Inquiries", "/contact"]] },
+];
 
 export default function Footer() {
   return (
-    <footer className="relative mt-32 border-t border-line">
-      <div className="hairline absolute inset-x-0 top-0" />
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-        <div className="grid gap-12 lg:grid-cols-4">
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-3">
-              <Logo className="h-10 w-10" />
-              <div>
-                <p className="font-display text-lg font-semibold">{ORG.name}</p>
-                <p className="text-xs uppercase tracking-[0.18em] text-faint">
-                  {ORG.govt} · ANERT
-                </p>
+    <footer className="border-t border-line bg-bg">
+      <div className="mx-auto max-w-[1280px] px-6 py-20">
+        <div className="grid gap-12 md:grid-cols-12">
+          <div className="space-y-5 md:col-span-5">
+            <div className="flex items-center gap-2.5">
+              <Logo className="h-8 w-8" />
+              <span className="font-display text-xl font-extrabold tracking-tight text-ink">
+                Kerala HVIC
+              </span>
+            </div>
+            <p className="max-w-sm text-sm leading-relaxed text-muted/80">
+              Leading the transition to a sustainable, hydrogen-powered ecosystem through
+              innovative policy and precision engineering.
+            </p>
+            <p className="label-caps pt-2 text-[10px] text-ink/40">
+              © {new Date().getFullYear()} Kerala HVIC Foundation · Govt. of Kerala · ANERT
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-8 md:col-span-7 md:grid-cols-3">
+            {COLS.map((c) => (
+              <div key={c.head} className="space-y-4">
+                <h4 className="label-caps text-[10px] text-ink/45">{c.head}</h4>
+                <ul className="space-y-2.5 text-sm font-medium">
+                  {c.links.map(([label, href]) => (
+                    <li key={label}>
+                      <Link href={href} className="text-muted transition-colors hover:text-primary">
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
-            <p className="mt-5 max-w-md text-sm leading-relaxed text-muted">
-              {ORG.vision}
-            </p>
-            <p className="mt-4 text-xs text-faint">
-              Incorporated {ORG.incorporated} · {ORG.section}
-            </p>
-          </div>
-
-          <div>
-            <h4 className="font-display text-sm font-semibold text-fg">Explore</h4>
-            <ul className="mt-4 space-y-2.5">
-              {NAV.map((n) => (
-                <li key={n.href}>
-                  <Link href={n.href} className="text-sm text-muted transition-colors hover:text-h2">
-                    {n.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-display text-sm font-semibold text-fg">Contact</h4>
-            <ul className="mt-4 space-y-3 text-sm text-muted">
-              <li>{ORG.address}</li>
-              <li>
-                <a href={`mailto:${ORG.email}`} className="hover:text-h2">{ORG.email}</a>
-              </li>
-              <li>
-                <a href={`tel:${ORG.phone}`} className="hover:text-h2">{ORG.phone}</a>
-              </li>
-            </ul>
-            <div className="mt-5 flex gap-3">
-              {["X", "in", "f", "▶"].map((s) => (
-                <a
-                  key={s}
-                  href="#"
-                  aria-label={`social ${s}`}
-                  className="glass glass-hover grid h-9 w-9 place-items-center rounded-lg text-xs text-muted"
-                >
-                  {s}
-                </a>
-              ))}
+            ))}
+            <div className="col-span-2 space-y-2 text-sm text-muted md:col-span-3 md:flex md:items-center md:gap-6 md:space-y-0 md:pt-4">
+              <a href={`mailto:${ORG.email}`} className="hover:text-primary">{ORG.email}</a>
+              <a href={`tel:${ORG.phone}`} className="hover:text-primary">{ORG.phone}</a>
             </div>
           </div>
-        </div>
-
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-line pt-8 text-xs text-faint sm:flex-row">
-          <p>© {new Date().getFullYear()} {ORG.name}. All rights reserved.</p>
-          <p className="flex items-center gap-2">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-h2 shadow-[0_0_8px_#00e08a]" />
-            A Government of Kerala initiative under ANERT
-          </p>
         </div>
       </div>
     </footer>

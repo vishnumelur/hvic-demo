@@ -1,39 +1,60 @@
-import { PROJECTS } from "@/lib/content";
+import Link from "next/link";
+import { ROADMAP } from "@/lib/content";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
+import { IconArrowRight } from "@/components/ui/Icons";
+
+function StatusChip({ status }: { status: string }) {
+  const map: Record<string, string> = {
+    Active: "bg-accent text-primary-700",
+    Pilot: "bg-primary/10 text-primary",
+    Staging: "bg-tertiary/40 text-on-tertiary",
+  };
+  return (
+    <span className={`label-caps rounded-full px-3 py-1 text-[10px] ${map[status] ?? "bg-card text-muted"}`}>
+      {status}
+    </span>
+  );
+}
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+    <section id="roadmap" className="bg-card py-24 sm:py-28">
+      <div className="mx-auto max-w-[1280px] px-6">
         <SectionHeading
-          kicker="Flagship Programmes"
-          title={<>From roadmap to <span className="aurora-text">real-world impact.</span></>}
-          intro="Hydrogen is already moving people and freight across Kerala — at the airport, on the backwaters and along our highways."
+          center
+          kicker="Strategic Roadmap"
+          title="Architecture of a Sustainable Future"
         />
 
-        <div className="mt-14 grid gap-5 md:grid-cols-2">
-          {PROJECTS.map((p, i) => (
-            <Reveal key={p.title} delay={i * 80}>
-              <article className="glass glass-hover group relative h-full overflow-hidden rounded-3xl p-8">
-                <div
-                  className={`absolute -right-16 -top-16 h-44 w-44 rounded-full blur-3xl transition-opacity duration-500 group-hover:opacity-90 ${
-                    p.accent === "h2" ? "bg-h2/20" : "bg-cyan/20"
-                  }`}
-                />
-                <div className="relative">
-                  <div className="flex items-center gap-3">
-                    <span className="rounded-full border border-line px-3 py-1 text-xs font-medium text-h2-soft">
+        <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-2">
+          {ROADMAP.map((p, i) => (
+            <Reveal key={p.title} delay={i * 90}>
+              <article className="group h-full overflow-hidden rounded-[2.5rem] border border-line bg-white premium-shadow hover-lift">
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="h-full w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute left-5 top-5 flex gap-2">
+                    <span className="label-caps rounded-full border border-white/30 bg-black/30 px-3 py-1 text-[10px] text-white backdrop-blur-md">
                       {p.tag}
                     </span>
-                    <span className="font-display text-sm font-semibold text-cyan-soft">{p.cost}</span>
+                    <StatusChip status={p.status} />
                   </div>
-                  <h3 className="mt-6 font-display text-2xl font-semibold">{p.title}</h3>
-                  <p className="mt-3 max-w-md leading-relaxed text-muted">{p.desc}</p>
-                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-h2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    Learn more
-                    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-                  </span>
+                </div>
+                <div className="space-y-4 p-8">
+                  <p className="label-caps text-[10px] text-primary">{p.phase}</p>
+                  <h3 className="font-display text-2xl font-bold tracking-tight text-ink">{p.title}</h3>
+                  <p className="leading-relaxed text-muted/85">{p.desc}</p>
+                  <Link
+                    href="/programmes"
+                    className="group/link inline-flex items-center gap-2 font-semibold text-ink"
+                  >
+                    View Roadmap
+                    <IconArrowRight className="h-5 w-5 text-primary transition-transform group-hover/link:translate-x-1" />
+                  </Link>
                 </div>
               </article>
             </Reveal>

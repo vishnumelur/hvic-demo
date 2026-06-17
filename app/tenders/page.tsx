@@ -1,59 +1,119 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/ui/PageHeader";
 import Reveal from "@/components/ui/Reveal";
+import { IconDownload, IconArrowRight } from "@/components/ui/Icons";
 import { TENDERS } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Tenders & Careers",
-  description: "Open tenders, job notifications and career opportunities at Kerala HVIC.",
+  description:
+    "Open tenders, procurement notices and career opportunities at Kerala HVIC Foundation.",
 };
 
 export default function TendersPage() {
   const tenders = TENDERS.filter((t) => t.type === "Tender");
   const careers = TENDERS.filter((t) => t.type === "Career");
 
+  const groups = [
+    { label: "Open tenders", items: tenders },
+    { label: "Careers", items: careers },
+  ];
+
   return (
-    <>
+    <div className="bg-bg">
       <PageHeader
-        kicker="Tenders & Careers"
-        title={<>Build the <span className="aurora-text">hydrogen economy</span> with us.</>}
-        intro="Current tenders, procurement notices and career openings at Kerala HVIC Foundation."
+        kicker="Tenders &amp; Careers"
+        title={
+          <>
+            Build the{" "}
+            <span className="accent-italic">hydrogen economy</span>{" "}
+            with us.
+          </>
+        }
+        intro="Current tenders, procurement notices and career openings at Kerala HVIC Foundation. We welcome partners, engineers and innovators committed to a zero-carbon Kerala."
       />
 
-      <section className="mx-auto max-w-7xl space-y-16 px-4 sm:px-6">
-        {[
-          { label: "Open tenders", items: tenders },
-          { label: "Careers", items: careers },
-        ].map((group) => (
-          <div key={group.label}>
-            <h2 className="font-display text-2xl font-bold tracking-tight">{group.label}</h2>
-            <div className="mt-6 grid gap-4">
-              {group.items.map((t, i) => (
-                <Reveal key={t.ref} delay={i * 70}>
-                  <div className="glass glass-hover flex flex-col gap-4 rounded-2xl p-6 lg:flex-row lg:items-center lg:justify-between">
-                    <div>
-                      <div className="flex flex-wrap items-center gap-3 text-xs">
-                        <span className="rounded-full bg-h2/15 px-3 py-1 font-medium text-h2-soft">{t.status}</span>
-                        <span className="font-mono text-faint">{t.ref}</span>
+      <section className="py-24">
+        <div className="mx-auto max-w-[1280px] space-y-20 px-6">
+          {groups.map((group) => (
+            <div key={group.label}>
+              {/* Group heading */}
+              <Reveal>
+                <h2 className="font-display text-3xl text-ink">
+                  {group.label}
+                </h2>
+              </Reveal>
+
+              {/* Row cards */}
+              <div className="mt-8 flex flex-col gap-4">
+                {group.items.map((item, i) => (
+                  <Reveal key={item.ref} delay={i * 80}>
+                    <div className="rounded-[2rem] border border-line bg-white premium-shadow hover-lift flex flex-col gap-6 p-6 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
+                      {/* Left — meta + title + dates */}
+                      <div className="min-w-0 flex-1">
+                        {/* Status pill + ref */}
+                        <div className="flex flex-wrap items-center gap-3">
+                          <span className="inline-block rounded-full bg-primary/10 px-3 py-1 label-caps text-primary">
+                            {item.status}
+                          </span>
+                          <span className="font-mono text-sm font-medium text-muted tracking-wide">
+                            {item.ref}
+                          </span>
+                        </div>
+
+                        {/* Title */}
+                        <h3 className="mt-4 font-display text-lg text-ink leading-snug">
+                          {item.title}
+                        </h3>
+
+                        {/* Dates */}
+                        <p className="mt-2 text-sm text-muted">
+                          Posted {item.posted} &middot; Closes{" "}
+                          <span className="font-semibold text-primary">
+                            {item.closes}
+                          </span>
+                        </p>
                       </div>
-                      <h3 className="mt-3 font-display text-lg font-semibold">{t.title}</h3>
-                      <p className="mt-1.5 text-sm text-muted">
-                        Posted {t.posted} · Closes <span className="text-cyan-soft">{t.closes}</span>
-                      </p>
+
+                      {/* Right — action buttons */}
+                      <div className="flex shrink-0 flex-wrap items-center gap-3">
+                        {/* Download outline button */}
+                        <a
+                          href="#"
+                          className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-primary hover:text-primary"
+                        >
+                          <IconDownload className="h-4 w-4" />
+                          Download
+                        </a>
+
+                        {/* Primary CTA */}
+                        <a
+                          href="#"
+                          className="btn-primary inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white"
+                        >
+                          {item.type === "Career" ? "Apply" : "Submit bid"}
+                          <IconArrowRight className="h-4 w-4" />
+                        </a>
+                      </div>
                     </div>
-                    <div className="flex shrink-0 gap-3">
-                      <a href="#" className="glass rounded-xl px-4 py-2.5 text-sm font-medium text-muted hover:text-fg">Download</a>
-                      <a href="#" className="btn-glow rounded-xl bg-gradient-to-r from-h2 to-cyan px-4 py-2.5 text-sm font-semibold text-ink">
-                        {t.type === "Career" ? "Apply" : "Submit bid"}
-                      </a>
-                    </div>
-                  </div>
-                </Reveal>
-              ))}
+                  </Reveal>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+
+          {/* Empty-state fallback (rendered only if both groups are empty) */}
+          {tenders.length === 0 && careers.length === 0 && (
+            <Reveal>
+              <div className="rounded-[2rem] border border-line bg-card px-8 py-16 text-center">
+                <p className="text-muted">
+                  No open listings at this time. Check back soon.
+                </p>
+              </div>
+            </Reveal>
+          )}
+        </div>
       </section>
-    </>
+    </div>
   );
 }

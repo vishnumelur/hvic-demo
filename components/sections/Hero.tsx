@@ -1,75 +1,74 @@
-"use client";
-
-import dynamic from "next/dynamic";
 import Link from "next/link";
-import { ORG } from "@/lib/content";
-
-const HydrogenHero = dynamic(() => import("@/components/three/HydrogenHero"), {
-  ssr: false,
-});
+import { IconArrowRight } from "@/components/ui/Icons";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100svh] overflow-hidden">
-      {/* 3D layer */}
-      <div className="absolute inset-0 lg:left-1/3">
-        <HydrogenHero />
-      </div>
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-transparent" />
+    <section className="hero-glow relative flex min-h-screen items-center overflow-hidden pt-20">
+      <div className="mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-12 px-6 lg:grid-cols-2 lg:gap-16">
+        {/* Copy */}
+        <div className="z-10 py-16 lg:py-24">
+          <div className="inline-flex items-center gap-2 rounded-full border border-primary/10 bg-primary/5 px-4 py-1.5 text-primary">
+            <span className="pulse-dot h-1.5 w-1.5 rounded-full bg-primary" />
+            <span className="label-caps text-[10px]">Energy Innovation Leader 2026</span>
+          </div>
 
-      <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-4 pt-28 sm:px-6">
-        <div className="max-w-2xl">
-          <span className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium text-h2-soft">
-            <span className="h-1.5 w-1.5 rounded-full bg-h2 shadow-[0_0_10px_#00e08a]" />
-            Government of Kerala · Established under ANERT · {ORG.incorporated}
-          </span>
-
-          <h1 className="mt-6 font-display text-5xl font-bold leading-[1.04] tracking-tight sm:text-6xl lg:text-7xl">
-            Powering Kerala&apos;s
+          <h1 className="mt-7 font-display text-[clamp(2.75rem,7vw,5rem)] text-ink">
+            Powering
             <br />
-            <span className="aurora-text">Hydrogen Future</span>
+            <span className="accent-italic">Hydrogen</span>
+            <br />
+            Innovation
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-            Kerala is the only Indian state building a complete green-hydrogen value
-            chain — from production and storage to distribution, real-world
-            applications and research.
+          <p className="mt-7 max-w-lg text-lg leading-relaxed text-muted/90 sm:text-xl">
+            Architecting a zero-carbon economy through precision engineering and world-scale
+            hydrogen infrastructure. Kerala&apos;s gateway to the future of clean energy.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <Link
               href="/programmes"
-              className="btn-glow rounded-xl bg-gradient-to-r from-h2 to-cyan px-6 py-3.5 font-semibold text-ink"
+              className="btn-primary premium-shadow inline-flex items-center gap-2 rounded-2xl bg-ink px-7 py-4 font-semibold text-white"
             >
-              Explore the Valley
+              Explore Strategy
+              <IconArrowRight className="h-5 w-5" />
             </Link>
             <Link
               href="/about"
-              className="glass glass-hover rounded-xl px-6 py-3.5 font-medium text-fg"
+              className="glass-card rounded-2xl px-7 py-4 font-medium text-ink transition-colors hover:bg-white"
             >
-              About the Foundation
+              Technical Specs
             </Link>
           </div>
-
-          <div className="mt-14 flex flex-wrap gap-x-10 gap-y-4">
-            {[
-              ["₹133 Cr", "Pilot investment"],
-              ["57 T", "Green H₂ / year"],
-              ["1 GW", "Electrolyser hub"],
-            ].map(([v, l]) => (
-              <div key={l}>
-                <p className="font-display text-2xl font-bold aurora-text">{v}</p>
-                <p className="text-xs uppercase tracking-wider text-faint">{l}</p>
-              </div>
-            ))}
-          </div>
         </div>
-      </div>
 
-      {/* scroll cue */}
-      <div className="pointer-events-none absolute bottom-8 left-1/2 -translate-x-1/2 text-faint">
-        <div className="flex h-10 w-6 items-start justify-center rounded-full border border-line p-1.5">
-          <span className="h-2 w-1 animate-float rounded-full bg-h2" />
+        {/* Visual */}
+        <div className="relative h-[460px] sm:h-[560px] lg:h-[680px]">
+          <div className="group relative h-full w-full overflow-hidden rounded-[40px] premium-shadow">
+            <img
+              src="/img/hero.jpg"
+              alt="Green hydrogen logistics corridor through Kerala's hills"
+              className="absolute inset-0 h-full w-full scale-110 object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-100"
+            />
+            <div className="absolute inset-0 bg-gradient-to-tr from-bg/30 via-transparent to-transparent" />
+
+            {/* Floating callout */}
+            <div className="glass-card absolute right-6 top-6 animate-float rounded-3xl p-5 sm:right-8 sm:top-8">
+              <div className="font-display text-3xl font-extrabold text-primary">94.2%</div>
+              <div className="label-caps mt-0.5 text-[10px] text-ink/55">Grid Purity</div>
+            </div>
+
+            <div className="glass-card absolute bottom-6 left-6 rounded-2xl px-4 py-3 sm:bottom-8 sm:left-8">
+              <div className="flex items-center gap-2">
+                <span className="pulse-dot h-2 w-2 rounded-full bg-accent" />
+                <span className="text-sm font-semibold text-ink">Statewide H₂ corridor · Live</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Soft decorative glows */}
+          <div className="absolute -bottom-16 -left-10 -z-10 h-64 w-64 rounded-full bg-accent/20 blur-[120px]" />
+          <div className="absolute -top-16 -right-10 -z-10 h-72 w-72 rounded-full bg-primary/10 blur-[140px]" />
         </div>
       </div>
     </section>

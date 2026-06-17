@@ -2,36 +2,39 @@ import Link from "next/link";
 import { NEWS } from "@/lib/content";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
+import { IconArrowRight } from "@/components/ui/Icons";
 
 export default function NewsTeaser() {
   return (
-    <section className="relative py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+    <section className="bg-white py-24 sm:py-28">
+      <div className="mx-auto max-w-[1280px] px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <SectionHeading
-            kicker="Newsroom"
-            title={<>Latest news &amp; <span className="aurora-text">notifications</span></>}
-          />
+          <SectionHeading kicker="Newsroom" title="Latest News & Notifications" />
           <Reveal>
-            <Link href="/news" className="glass glass-hover rounded-xl px-5 py-3 text-sm font-medium">
-              View all updates
+            <Link
+              href="/news"
+              className="inline-flex items-center gap-2 rounded-full border border-line px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-primary hover:text-primary"
+            >
+              View all <IconArrowRight className="h-4 w-4" />
             </Link>
           </Reveal>
         </div>
 
         <div className="mt-12 divide-y divide-line border-y border-line">
           {NEWS.map((n, i) => (
-            <Reveal key={n.title} delay={i * 70}>
+            <Reveal key={n.title} delay={i * 60}>
               <Link
                 href="/news"
-                className="group flex flex-col gap-3 py-6 transition-colors hover:bg-white/[0.02] sm:flex-row sm:items-center sm:gap-8"
+                className="group flex flex-col gap-3 py-6 transition-colors hover:bg-card/50 sm:flex-row sm:items-center sm:gap-8"
               >
-                <span className="w-28 shrink-0 font-display text-sm text-faint">{n.date}</span>
-                <span className="w-32 shrink-0">
-                  <span className="rounded-full border border-line px-3 py-1 text-xs text-h2-soft">{n.category}</span>
+                <span className="w-28 shrink-0 font-display text-sm font-medium text-muted/70">{n.date}</span>
+                <span className="w-28 shrink-0">
+                  <span className="rounded-full bg-primary/8 px-3 py-1 text-xs font-semibold text-primary">{n.category}</span>
                 </span>
                 <span className="flex-1">
-                  <span className="block font-display text-lg font-medium transition-colors group-hover:text-h2">{n.title}</span>
+                  <span className="block font-display text-lg font-semibold text-ink transition-colors group-hover:text-primary">
+                    {n.title}
+                  </span>
                   <span className="mt-1 block text-sm text-muted">{n.excerpt}</span>
                 </span>
               </Link>

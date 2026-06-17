@@ -10,7 +10,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -18,74 +18,78 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-40 transition-all duration-500 ${
-        scrolled ? "py-2" : "py-4"
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${
+        scrolled
+          ? "border-line bg-white/80 backdrop-blur-xl"
+          : "border-transparent bg-white/40 backdrop-blur-md"
       }`}
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <nav
-          className={`flex items-center justify-between rounded-2xl px-4 py-3 transition-all duration-500 ${
-            scrolled ? "glass shadow-[0_8px_40px_-12px_rgba(0,0,0,0.6)]" : "border border-transparent"
-          }`}
-        >
-          <Link href="/" className="flex items-center gap-3 group">
-            <Logo className="h-9 w-9" />
-            <span className="leading-none">
-              <span className="block font-display text-base font-semibold tracking-tight text-fg">
-                Kerala HVIC
-              </span>
-              <span className="block text-[10px] uppercase tracking-[0.18em] text-faint">
-                Govt. of Kerala · ANERT
-              </span>
-            </span>
-          </Link>
+      <div
+        className={`mx-auto flex max-w-[1280px] items-center justify-between px-6 transition-all duration-300 ${
+          scrolled ? "h-16" : "h-20"
+        }`}
+      >
+        <Link href="/" className="flex items-center gap-2.5">
+          <Logo className="h-8 w-8" />
+          <span className="font-display text-xl font-extrabold tracking-tight text-ink">
+            Kerala HVIC
+          </span>
+        </Link>
 
-          <div className="hidden items-center gap-1 lg:flex">
-            {NAV.map((n) => (
-              <Link
-                key={n.href}
-                href={n.href}
-                className="rounded-lg px-3 py-2 text-sm text-muted transition-colors hover:text-fg"
-              >
-                {n.label}
-              </Link>
-            ))}
-          </div>
-
-          <div className="flex items-center gap-2">
+        <nav className="hidden items-center gap-8 md:flex">
+          {NAV.map((n) => (
             <Link
-              href="/programmes"
-              className="btn-glow hidden rounded-xl bg-gradient-to-r from-h2 to-cyan px-4 py-2.5 text-sm font-semibold text-ink sm:inline-block"
+              key={n.href}
+              href={n.href}
+              className="text-[15px] font-medium text-ink/60 transition-colors hover:text-primary"
             >
-              Explore the Valley
+              {n.label}
             </Link>
-            <button
-              aria-label="Menu"
-              onClick={() => setOpen((v) => !v)}
-              className="glass rounded-xl p-2.5 lg:hidden"
-            >
-              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-                {open ? <path d="M6 6l12 12M6 18 18 6" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
-              </svg>
-            </button>
-          </div>
+          ))}
         </nav>
 
-        {open && (
-          <div className="glass mt-2 grid gap-1 rounded-2xl p-3 lg:hidden">
+        <div className="flex items-center gap-2">
+          <Link
+            href="/contact"
+            className="btn-primary hidden rounded-full bg-primary px-7 py-2.5 text-sm font-semibold text-white hover:opacity-90 sm:inline-block"
+          >
+            Connect
+          </Link>
+          <button
+            aria-label="Menu"
+            onClick={() => setOpen((v) => !v)}
+            className="grid h-10 w-10 place-items-center rounded-full text-ink transition-colors hover:bg-card md:hidden"
+          >
+            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+              {open ? <path d="M6 6l12 12M6 18 18 6" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {open && (
+        <div className="border-t border-line bg-white/95 px-6 py-3 backdrop-blur-xl md:hidden">
+          <div className="grid gap-1">
             {NAV.map((n) => (
               <Link
                 key={n.href}
                 href={n.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-2.5 text-sm text-muted hover:bg-white/5 hover:text-fg"
+                className="rounded-xl px-3 py-2.5 font-medium text-ink/70 hover:bg-card hover:text-primary"
               >
                 {n.label}
               </Link>
             ))}
+            <Link
+              href="/contact"
+              onClick={() => setOpen(false)}
+              className="mt-1 rounded-full bg-primary px-5 py-3 text-center font-semibold text-white"
+            >
+              Connect
+            </Link>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </header>
   );
 }
