@@ -4,6 +4,19 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { NAV } from "@/lib/content";
 import Logo from "@/components/ui/Logo";
+import {
+  IconAtom, IconRoute, IconImage, IconNews, IconBriefcase, IconMail,
+  IconUser, IconArrowRight, IconChevronRight, IconClose, IconMenu,
+} from "@/components/ui/Icons";
+
+const NAV_ICONS: Record<string, (p: { className?: string }) => React.ReactElement> = {
+  "/programmes": IconAtom,
+  "/about": IconRoute,
+  "/gallery": IconImage,
+  "/news": IconNews,
+  "/tenders": IconBriefcase,
+  "/contact": IconMail,
+};
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -16,93 +29,126 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Lock body scroll while the mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${
-        scrolled
-          ? "border-line bg-white/80 backdrop-blur-xl"
-          : "border-transparent bg-white/40 backdrop-blur-md"
-      }`}
-    >
-      <div
-        className={`mx-auto flex max-w-[1280px] items-center justify-between px-6 transition-all duration-300 ${
-          scrolled ? "h-16" : "h-20"
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${
+          scrolled ? "border-line bg-white/80 backdrop-blur-xl" : "border-transparent bg-white/40 backdrop-blur-md"
         }`}
       >
-        <Link href="/" className="flex items-center gap-2.5">
-          <Logo className="h-8 w-8" />
-          <span className="font-display text-xl font-extrabold tracking-tight text-ink">
-            Kerala HVIC
-          </span>
-        </Link>
-
-        <nav className="hidden items-center gap-8 md:flex">
-          {NAV.map((n) => (
-            <Link
-              key={n.href}
-              href={n.href}
-              className="text-[15px] font-medium text-ink/60 transition-colors hover:text-primary"
-            >
-              {n.label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="flex items-center gap-3">
-          <Link
-            href="/login"
-            className="hidden text-sm font-semibold text-ink/70 transition-colors hover:text-primary md:inline-block"
-          >
-            Sign In
+        <div
+          className={`mx-auto flex max-w-[1280px] items-center justify-between px-6 transition-all duration-300 ${
+            scrolled ? "h-16" : "h-20"
+          }`}
+        >
+          <Link href="/" className="flex items-center gap-2.5">
+            <Logo className="h-8 w-8" />
+            <span className="font-display text-xl font-extrabold tracking-tight text-ink">Kerala HVIC</span>
           </Link>
-          <Link
-            href="/contact"
-            className="btn-primary hidden rounded-full bg-primary px-7 py-2.5 text-sm font-semibold text-white hover:opacity-90 sm:inline-block"
-          >
-            Connect
-          </Link>
-          <button
-            aria-label="Menu"
-            onClick={() => setOpen((v) => !v)}
-            className="grid h-10 w-10 place-items-center rounded-full text-ink transition-colors hover:bg-card md:hidden"
-          >
-            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-              {open ? <path d="M6 6l12 12M6 18 18 6" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
-            </svg>
-          </button>
-        </div>
-      </div>
 
-      {open && (
-        <div className="border-t border-line bg-white/95 px-6 py-3 backdrop-blur-xl md:hidden">
-          <div className="grid gap-1">
+          <nav className="hidden items-center gap-8 md:flex">
             {NAV.map((n) => (
-              <Link
-                key={n.href}
-                href={n.href}
-                onClick={() => setOpen(false)}
-                className="rounded-xl px-3 py-2.5 font-medium text-ink/70 hover:bg-card hover:text-primary"
-              >
+              <Link key={n.href} href={n.href} className="text-[15px] font-medium text-ink/60 transition-colors hover:text-primary">
                 {n.label}
               </Link>
             ))}
+          </nav>
+
+          <div className="flex items-center gap-3">
+            <Link href="/login" className="hidden text-sm font-semibold text-ink/70 transition-colors hover:text-primary md:inline-block">
+              Sign In
+            </Link>
+            <Link href="/contact" className="btn-primary hidden rounded-full bg-primary px-7 py-2.5 text-sm font-semibold text-white hover:opacity-90 sm:inline-block">
+              Connect
+            </Link>
+            <button
+              aria-label="Open menu"
+              onClick={() => setOpen(true)}
+              className="grid h-10 w-10 place-items-center rounded-full text-ink transition-colors hover:bg-card md:hidden"
+            >
+              <IconMenu className="h-5 w-5" />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Full-screen mobile menu */}
+      {open && (
+        <div className="animate-fade fixed inset-0 z-[60] flex h-dvh flex-col bg-bg md:hidden">
+          <div className="hero-glow pointer-events-none absolute inset-0" />
+
+          <div className="relative flex h-20 shrink-0 items-center justify-between px-6">
+            <Link href="/" onClick={() => setOpen(false)} className="flex items-center gap-2.5">
+              <Logo className="h-8 w-8" />
+              <span className="font-display text-xl font-extrabold tracking-tight text-ink">Kerala HVIC</span>
+            </Link>
+            <button
+              aria-label="Close menu"
+              onClick={() => setOpen(false)}
+              className="grid h-10 w-10 place-items-center rounded-full border border-line bg-white text-ink"
+            >
+              <IconClose className="h-5 w-5" />
+            </button>
+          </div>
+
+          <div className="relative flex-1 overflow-y-auto px-5 pb-4">
+            <p className="animate-rise mb-2 px-2 label-caps text-[10px] text-muted/50">Navigate</p>
+            <nav className="animate-rise overflow-hidden rounded-3xl border border-line bg-white premium-shadow" style={{ animationDelay: "40ms" }}>
+              <div className="divide-y divide-line">
+                {NAV.map((n) => {
+                  const Icon = NAV_ICONS[n.href] ?? IconChevronRight;
+                  return (
+                    <Link
+                      key={n.href}
+                      href={n.href}
+                      onClick={() => setOpen(false)}
+                      className="group flex items-center gap-4 px-4 py-4 transition-colors hover:bg-card"
+                    >
+                      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-card text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                        <Icon className="h-[18px] w-[18px]" />
+                      </span>
+                      <span className="flex-1 font-display text-lg font-bold tracking-tight text-ink">{n.label}</span>
+                      <IconChevronRight className="h-5 w-5 text-muted/40 transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
+                    </Link>
+                  );
+                })}
+              </div>
+            </nav>
+          </div>
+
+          <div
+            className="animate-rise relative shrink-0 space-y-3 border-t border-line bg-white/85 px-5 pt-5 backdrop-blur-xl"
+            style={{ animationDelay: "120ms", paddingBottom: "calc(env(safe-area-inset-bottom) + 1.25rem)" }}
+          >
             <Link
               href="/login"
               onClick={() => setOpen(false)}
-              className="rounded-xl px-3 py-2.5 font-medium text-ink/70 hover:bg-card hover:text-primary"
+              className="flex w-full items-center justify-center gap-2 rounded-2xl border border-line bg-white py-3.5 font-semibold text-ink transition-colors hover:border-primary hover:text-primary"
             >
-              Sign In
+              <IconUser className="h-5 w-5" /> Sign In
             </Link>
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="mt-1 rounded-full bg-primary px-5 py-3 text-center font-semibold text-white"
+              className="btn-primary flex w-full items-center justify-center gap-2 rounded-2xl bg-primary py-4 font-semibold text-white"
             >
-              Connect
+              Connect <IconArrowRight className="h-5 w-5" />
             </Link>
+            <div className="flex items-center justify-center gap-2 pt-1 text-xs text-muted">
+              <IconMail className="h-3.5 w-3.5 text-primary" />
+              <a href="mailto:info@keralahvic.org" className="hover:text-primary">info@keralahvic.org</a>
+            </div>
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 }
