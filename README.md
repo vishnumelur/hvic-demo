@@ -1,36 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kerala HVIC Foundation — Official Website (Demo)
 
-## Getting Started
+A premium, **3D / WebGL, scroll-driven** marketing website for the **Kerala HVIC Foundation**
+(Hydrogen Valley Innovation Cluster), the Government of Kerala Section-8 not-for-profit
+established under **ANERT** to implement India's first complete green-hydrogen value chain.
 
-First, run the development server:
+This repository is a **high-fidelity pitch demo** built against the Foundation's EOI for a
+modern, responsive, secure, CMS-ready official website.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+> Live demo: deployed as a static site on **Vercel**.
+
+---
+
+## ✨ Highlights
+
+- **Cinematic deep-tech brand** — near-black canvas, hydrogen-green → electric-cyan aurora
+  gradients, frosted-glass surfaces with neon edges.
+- **Full WebGL hero** — an animated, mouse-reactive hydrogen energy core (React Three Fiber):
+  distorted emissive nucleus, wireframe shell, orbiting electrons, particle field.
+- **Smooth scroll** (Lenis) with scroll-reveal animations and animated stat counters.
+- **Fully responsive** — desktop, tablet and mobile, with an accessible mobile menu.
+- **Static export** — pure static HTML/CSS/JS (`output: "export"`), zero server runtime,
+  ideal for cheap, fast, secure hosting on Vercel + CDN.
+- **SEO-ready** — per-page metadata, semantic structure, Open Graph tags.
+- `prefers-reduced-motion` respected throughout.
+
+## 🗺 Pages (mapped to the EOI scope of work)
+
+| Page | EOI module | Notes |
+|------|------------|-------|
+| `/` Home | 3.1 Homepage | Hero, dynamic banner area, quick access, latest news, highlighted projects |
+| `/about` | 3.2 About Us | Org profile, vision & mission, leadership, timeline |
+| `/programmes` | 3.3 Services / Programmes | Value-chain modules + flagship project pages |
+| `/news` | 3.4 News & Notifications | News feed + downloadable notices/circulars + archive |
+| `/gallery` | 3.6 Gallery | Photo & video grid, event highlights |
+| `/tenders` | 3.5 Tenders / Careers | Open tenders & job notifications with expiry dates + downloads |
+| `/contact` | 3.7 Contact | Contact form, office directory, map integration |
+
+> **Admin Panel (EOI 3.8)** and dynamic CMS content are out of scope for this static pitch
+> demo. The architecture is CMS-ready — see [Roadmap](#-roadmap-to-full-cms).
+
+## 🎨 Design system — "Aurora Dark"
+
+| Token | Value |
+|-------|-------|
+| Canvas | `#060B14` |
+| Panels | `#0B1220` |
+| Primary (Hydrogen green) | `#00E08A` |
+| Secondary (Electric cyan) | `#00C2FF` |
+| Text / Muted | `#EAF2F0` / `#8FA3AD` |
+| Display font | Space Grotesk |
+| Body font | Inter |
+
+The design system was prototyped in **Google Stitch** (project: *Kerala HVIC Foundation*,
+design system *HVIC Aurora Dark*) and implemented as Tailwind v4 theme tokens in
+[`app/globals.css`](app/globals.css).
+
+## 🧱 Tech stack
+
+- **Next.js 16** (App Router) + **React 19** — static export
+- **Tailwind CSS v4** — theme tokens & utilities
+- **React Three Fiber** + **drei** + **three.js** — WebGL hero scene
+- **Lenis** — smooth scrolling
+- **GSAP** + **Framer Motion** — available for richer motion
+- **TypeScript**
+
+## 📁 Project structure
+
+```
+app/                  Routes (home + 6 inner pages), layout, global styles
+components/
+  sections/           Homepage sections (Hero, Vision, ValueChain, …)
+  three/              HydrogenHero — the WebGL scene (client-only)
+  ui/                 Reveal, SectionHeading, PageHeader, Icons, Logo
+  Navbar.tsx, Footer.tsx, SmoothScroll.tsx
+lib/content.ts        Single source of truth for all site content/data
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+All editable copy, stats, projects, partners, news and tenders live in
+[`lib/content.ts`](lib/content.ts) — change content there without touching components.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev      # http://localhost:3000
+```
 
-## Learn More
+## 🏗 Build & static export
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build    # outputs a static site to ./out
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The `out/` directory is fully static and can be served by any static host or CDN.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ☁️ Deploy to Vercel
 
-## Deploy on Vercel
+This project is configured for static export and deploys to Vercel with zero config:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npx vercel        # preview deploy
+npx vercel --prod # production deploy
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Vercel auto-detects Next.js and serves `out/` over its global CDN with automatic HTTPS/SSL.
+
+## 🔭 Roadmap to full CMS
+
+To satisfy the complete EOI (admin panel, role-based access, dynamic content):
+
+1. Connect a headless CMS (e.g. Payload, Strapi, or Sanity) and drive `lib/content.ts`
+   equivalents from API/content collections.
+2. Add the **Admin Panel** (3.8): dashboard, role-based user management, content/banner
+   editing, media uploads.
+3. Add site-wide search, English/Malayalam multilingual support, and a document download
+   center (EOI §5).
+4. Backup/recovery and access-control hardening (EOI §4).
+
+---
+
+© 2026 Kerala HVIC Foundation. A Government of Kerala initiative under ANERT.
+Demo content compiled from public ANERT / HVIC sources for pitch purposes.
