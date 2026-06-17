@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHeader from "@/components/ui/PageHeader";
 import Reveal from "@/components/ui/Reveal";
-import { VALUE_CHAIN, ROADMAP } from "@/lib/content";
+import { VALUE_CHAIN, ROADMAP, ANCHOR_SECTORS, PHASES } from "@/lib/content";
 import { ICONS, IconArrowRight } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
   title: "Programmes",
   description:
-    "Green-hydrogen programmes across Kerala&apos;s full value chain — from production and storage to transport and R&D.",
+    "Green-hydrogen programmes across Kerala's full value chain — from production and storage to transport and R&D.",
 };
 
 function StatusChip({ status }: { status: string }) {
@@ -143,6 +143,81 @@ export default function ProgrammesPage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── Anchor sectors ───────────────────────────────────── */}
+      <section className="bg-bg py-24">
+        <div className="mx-auto max-w-[1280px] px-6">
+          <Reveal>
+            <p className="label-caps text-primary">Demand &amp; Offtake</p>
+          </Reveal>
+          <Reveal delay={80}>
+            <h2 className="mt-3 max-w-2xl font-display text-4xl text-ink sm:text-5xl">
+              Six <span className="accent-italic">anchor sectors</span>
+            </h2>
+          </Reveal>
+          <Reveal delay={140}>
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-muted">
+              The Kochi Green Hydrogen Valley aggregates demand across six anchor sectors,
+              each paired with a public-sector offtaker to make projects bankable.
+            </p>
+          </Reveal>
+
+          <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {ANCHOR_SECTORS.map((s, i) => {
+              const Icon = ICONS[s.icon];
+              return (
+                <Reveal key={s.sector} delay={i * 70}>
+                  <div className="h-full rounded-[2rem] border border-line bg-white p-8 premium-shadow hover-lift">
+                    <div className="flex items-center justify-between">
+                      <span className="inline-grid h-12 w-12 place-items-center rounded-xl border border-primary/15 bg-primary/10 text-primary">
+                        {Icon && <Icon className="h-6 w-6" />}
+                      </span>
+                      <span className="label-caps rounded-full bg-card px-3 py-1 text-[10px] text-muted">
+                        {s.offtaker}
+                      </span>
+                    </div>
+                    <h3 className="mt-6 font-display text-xl text-ink">{s.sector}</h3>
+                    <p className="mt-2 leading-relaxed text-muted">{s.desc}</p>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Development phases ────────────────────────────────── */}
+      <section className="bg-card py-24">
+        <div className="mx-auto max-w-[1280px] px-6">
+          <Reveal>
+            <p className="label-caps text-primary">The Roadmap</p>
+          </Reveal>
+          <Reveal delay={80}>
+            <h2 className="mt-3 max-w-2xl font-display text-4xl text-ink sm:text-5xl">
+              A phased path to <span className="accent-italic">scale</span>
+            </h2>
+          </Reveal>
+
+          <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {PHASES.map((p, i) => (
+              <Reveal key={p.title} delay={i * 90}>
+                <div className="relative h-full rounded-[2rem] border border-line bg-white p-8 premium-shadow hover-lift">
+                  <span className="font-display text-5xl font-extrabold text-primary/15">0{i + 1}</span>
+                  <p className="-mt-4 label-caps text-[10px] text-primary">{p.tag}</p>
+                  <h3 className="mt-2 font-display text-2xl font-bold tracking-tight text-ink">{p.title}</h3>
+                  <p className="mt-3 leading-relaxed text-muted/85">{p.desc}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={120}>
+            <p className="mt-8 text-sm text-muted/70">
+              Source: Kochi Green Hydrogen Valley Roadmap (ANERT · IGEF / GIZ · MNRE, 2024).
+            </p>
+          </Reveal>
         </div>
       </section>
     </>

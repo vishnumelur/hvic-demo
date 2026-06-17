@@ -47,6 +47,18 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${hanken.variable} ${fraunces.variable} antialiased`}>
+      <head>
+        {/* Progressive enhancement: flag JS before paint so scroll-reveal
+            content is hidden-then-animated only when JS runs. Without JS the
+            site renders fully (never blank). Failsafe reveals all if the app
+            fails to boot within 3s. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "document.documentElement.classList.add('js');window.__revealFailsafe=setTimeout(function(){document.documentElement.classList.add('reveal-all')},3000);",
+          }}
+        />
+      </head>
       <body>
         <AuthProvider>
           <SmoothScroll>

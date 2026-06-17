@@ -123,14 +123,18 @@ body {
   transform: scale(0.97);
 }
 
-/* Reveal-on-scroll */
-.reveal {
+/* Reveal-on-scroll — progressive enhancement.
+   Content is VISIBLE by default. It is only hidden-then-animated when JS is
+   active (the `js` class is added to <html> before paint). Without JS the full
+   site still renders, so it can never appear blank. */
+.js .reveal {
   opacity: 0;
   transform: translateY(26px);
   transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
-.reveal.in {
+.js .reveal.in,
+.reveal-all .reveal {
   opacity: 1;
   transform: none;
 }
@@ -172,7 +176,7 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
   .animate-float, .pulse-dot, .animate-drawer, .animate-fade, .animate-rise { animation: none; }
 }
 

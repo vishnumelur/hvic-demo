@@ -132,50 +132,40 @@ export default function UsersPage() {
           {users.map((user, idx) => {
             const isProtected = idx === 0;
             return (
-              <li
-                key={user.id}
-                className="flex flex-col gap-4 px-6 py-4 sm:flex-row sm:items-center"
-              >
-                {/* Avatar */}
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent text-sm font-bold text-white">
-                  {initials(user.name)}
-                </span>
-
-                {/* Name + email */}
-                <div className="min-w-0 flex-1">
-                  <p className="truncate font-semibold text-ink">{user.name}</p>
-                  <p className="truncate text-sm text-muted">{user.email}</p>
+              <li className="flex flex-col gap-3 px-5 py-4 sm:flex-row sm:items-center sm:gap-4 sm:px-6">
+                {/* Identity — avatar + name/email always on one line */}
+                <div className="flex min-w-0 flex-1 items-center gap-3">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent text-sm font-bold text-white">
+                    {initials(user.name)}
+                  </span>
+                  <div className="min-w-0">
+                    <p className="truncate font-semibold text-ink">{user.name}</p>
+                    <p className="truncate text-sm text-muted">{user.email}</p>
+                  </div>
                 </div>
 
-                {/* Role badge */}
-                <Badge tone={ROLE_TONES[user.role]}>{user.role}</Badge>
-
-                {/* Status badge */}
-                <Badge tone={user.status === "Active" ? "green" : "amber"}>
-                  <span className="h-1.5 w-1.5 rounded-full bg-current" />
-                  {user.status}
-                </Badge>
-
-                {/* Actions */}
-                <div className="flex shrink-0 items-center gap-2">
-                  <button
-                    className={iconBtn()}
-                    aria-label={`Edit ${user.name}`}
-                    title="Edit user"
-                  >
-                    <IconPencil className="h-4 w-4" />
-                  </button>
-
-                  {!isProtected && (
-                    <button
-                      className={iconBtn()}
-                      aria-label={`Delete ${user.name}`}
-                      title="Remove user"
-                      onClick={() => handleDelete(user.id)}
-                    >
-                      <IconTrash className="h-4 w-4" />
+                {/* Meta — badges + actions on one compact line (mobile & desktop) */}
+                <div className="flex items-center gap-2 pl-[3.25rem] sm:gap-3 sm:pl-0">
+                  <Badge tone={ROLE_TONES[user.role]}>{user.role}</Badge>
+                  <Badge tone={user.status === "Active" ? "green" : "amber"}>
+                    <span className="h-1.5 w-1.5 rounded-full bg-current" />
+                    {user.status}
+                  </Badge>
+                  <div className="ml-auto flex shrink-0 items-center gap-2 sm:ml-1">
+                    <button className={iconBtn()} aria-label={`Edit ${user.name}`} title="Edit user">
+                      <IconPencil className="h-4 w-4" />
                     </button>
-                  )}
+                    {!isProtected && (
+                      <button
+                        className={iconBtn()}
+                        aria-label={`Delete ${user.name}`}
+                        title="Remove user"
+                        onClick={() => handleDelete(user.id)}
+                      >
+                        <IconTrash className="h-4 w-4" />
+                      </button>
+                    )}
+                  </div>
                 </div>
               </li>
             );

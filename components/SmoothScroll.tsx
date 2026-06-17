@@ -5,6 +5,13 @@ import Lenis from "lenis";
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
+    // App booted — cancel the no-JS reveal failsafe set in the document head.
+    const w = window as unknown as { __revealFailsafe?: ReturnType<typeof setTimeout> };
+    if (w.__revealFailsafe) {
+      clearTimeout(w.__revealFailsafe);
+      w.__revealFailsafe = undefined;
+    }
+
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) return;
 

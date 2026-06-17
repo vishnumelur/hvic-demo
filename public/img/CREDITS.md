@@ -11,3 +11,6 @@ All photographs sourced from [Pexels](https://www.pexels.com) under the free Pex
 | facility.jpg | https://www.pexels.com/photo/10666081/ |
 | houseboat.jpg | https://www.pexels.com/photo/10933045/ |
 | energy.jpg | https://www.pexels.com/photo/414905/ |
+| solar.jpg | https://www.pexels.com/photo/2800845/ |
+| port.jpg | https://www.pexels.com/photo/13025947/ |
+| station.jpg | https://www.pexels.com/photo/12377482/ |

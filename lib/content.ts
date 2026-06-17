@@ -121,4 +121,24 @@ export const GALLERY = [
   { title: "Heavy Freight Corridor", type: "photo", image: "/img/truck.jpg" },
   { title: "Renewable Grid Integration", type: "photo", image: "/img/energy.jpg" },
   { title: "Green Highway Logistics", type: "video", image: "/img/hero.jpg" },
+  { title: "Floating Solar Generation", type: "photo", image: "/img/solar.jpg" },
+  { title: "Cochin Export Terminal", type: "photo", image: "/img/port.jpg" },
+  { title: "Green Refuelling Station", type: "video", image: "/img/station.jpg" },
+];
+
+// Anchor demand sectors with offtakers and pilots (Kochi Green H₂ Valley Roadmap).
+export const ANCHOR_SECTORS = [
+  { sector: "Refinery", offtaker: "BPCL", icon: "cylinder", desc: "A 5.1 kTPA green-hydrogen pilot at the Kochi refinery to test production and infrastructure." },
+  { sector: "Roadways", offtaker: "KSRTC", icon: "truck", desc: "Nine buses (HICE + fuel-cell) with centralised refuelling at the port and KMRL hubs." },
+  { sector: "Waterways", offtaker: "KSINC · Kochi Water Metro", icon: "route", desc: "A cargo barge and a fast passenger ferry to Kollam across the coastal canal." },
+  { sector: "Fertiliser", offtaker: "FACT", icon: "spark", desc: "Green-ammonia integration with the DAP process, opening export potential in Phase III." },
+  { sector: "Ports & Export", offtaker: "Cochin Port", icon: "route", desc: "Storage, port and trunk infrastructure for green-hydrogen and ammonia exports." },
+  { sector: "Research & Skilling", offtaker: "CSIR-NIIST · IIT-PKD", icon: "atom", desc: "Technical standards, reskilling programmes and R&D across the value chain." },
+];
+
+// Phase-wise development plan (Kochi Green H₂ Valley Roadmap).
+export const PHASES = [
+  { tag: "2024–25", title: "Preparation", desc: "Feasibility studies, innovation-based funding and mapping of the cluster's infrastructure needs." },
+  { tag: "2026–2030", title: "Pilot", desc: "Sector pilots — buses, barges and a refinery pilot — to prove technology and unit economics." },
+  { tag: "2030–2040", title: "Scale-up", desc: "The valley becomes self-sustaining; capacity scales on pilot results, with strong upside beyond 2040." },
 ];
