@@ -105,9 +105,9 @@ export default function LoginPage() {
         {/* Form sheet (card on mobile, plain on desktop) */}
         <div className="relative z-10 mx-auto -mt-8 w-full max-w-md px-4 pb-12 lg:mt-0 lg:px-0 lg:pb-0">
           <div className="rounded-[1.75rem] border border-line bg-white p-6 premium-shadow sm:p-8 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none">
-            <p className="label-caps text-primary">Admin Console</p>
-            <h1 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">Welcome back</h1>
-            <p className="mt-2 text-muted">Sign in to manage the Foundation&apos;s digital presence.</p>
+            <p className="label-caps hidden text-primary lg:block">Admin Console</p>
+            <h1 className="font-display text-3xl font-extrabold tracking-tight text-ink sm:text-4xl lg:mt-3">Welcome back</h1>
+            <p className="mt-2 text-muted">Sign in to manage your console.</p>
 
             <form onSubmit={submit} className="mt-7 space-y-5">
               <label className="block">
@@ -135,12 +135,17 @@ export default function LoginPage() {
               </button>
             </form>
 
-            <div className="mt-6 rounded-2xl border border-dashed border-primary/25 bg-primary/5 p-5">
-              <div className="flex items-center justify-between">
+            <div className="mt-6 rounded-2xl border border-dashed border-primary/25 bg-primary/5 p-4">
+              <div className="flex items-center justify-between gap-3">
                 <p className="label-caps text-[10px] text-primary">Demo credentials</p>
-                <button onClick={fillDemo} className="text-xs font-semibold text-primary hover:underline">Use demo credentials</button>
+                <button
+                  onClick={fillDemo}
+                  className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
+                >
+                  Autofill
+                </button>
               </div>
-              <dl className="mt-3 space-y-1.5 text-sm">
+              <dl className="mt-3 space-y-1 text-sm">
                 <div className="flex justify-between gap-4"><dt className="text-muted">Email</dt><dd className="font-medium text-ink">{DEMO.email}</dd></div>
                 <div className="flex justify-between gap-4"><dt className="text-muted">Password</dt><dd className="font-medium text-ink">{DEMO.password}</dd></div>
               </dl>
