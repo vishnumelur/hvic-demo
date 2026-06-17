@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Hanken_Grotesk, Fraunces } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import SiteChrome from "@/components/SiteChrome";
+import { AuthProvider } from "@/lib/auth";
 
 const hanken = Hanken_Grotesk({
   variable: "--font-hanken",
@@ -48,11 +48,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${hanken.variable} ${fraunces.variable} antialiased`}>
       <body>
-        <SmoothScroll>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-        </SmoothScroll>
+        <AuthProvider>
+          <SmoothScroll>
+            <SiteChrome>{children}</SiteChrome>
+          </SmoothScroll>
+        </AuthProvider>
       </body>
     </html>
   );

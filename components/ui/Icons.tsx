@@ -55,6 +55,60 @@ export const IconArrowUpRight = ({ className = base }: P) => (
 export const IconTruck = ({ className = base }: P) => (
   <S className={className}><path d="M3 6h11v9H3zM14 9h4l3 3v3h-7z" /><circle cx="7" cy="18" r="1.6" /><circle cx="17" cy="18" r="1.6" /></S>
 );
+export const IconGrid = ({ className = base }: P) => (
+  <S className={className}><rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" /><rect x="3" y="14" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" /></S>
+);
+export const IconNews = ({ className = base }: P) => (
+  <S className={className}><path d="M4 5h13v14H5a2 2 0 0 1-2-2V6" /><path d="M17 8h3v9a2 2 0 0 1-2 2" /><path d="M7 9h7M7 13h7M7 17h4" /></S>
+);
+export const IconBriefcase = ({ className = base }: P) => (
+  <S className={className}><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18" /></S>
+);
+export const IconImage = ({ className = base }: P) => (
+  <S className={className}><rect x="3" y="4" width="18" height="16" rx="2" /><circle cx="8.5" cy="9.5" r="1.5" /><path d="m4 18 5-5 4 4 3-3 4 4" /></S>
+);
+export const IconUsers = ({ className = base }: P) => (
+  <S className={className}><circle cx="9" cy="8" r="3.2" /><path d="M3 20a6 6 0 0 1 12 0" /><path d="M16 5.5a3 3 0 0 1 0 5.5M21 20a6 6 0 0 0-4-5.7" /></S>
+);
+export const IconSettings = ({ className = base }: P) => (
+  <S className={className}><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-2.9 1.2 2 2 0 1 1-4 0 1.7 1.7 0 0 0-2.9-1.2l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0-1.2-2.9 2 2 0 1 1 0-4 1.7 1.7 0 0 0 1.2-2.9l-.1-.1A2 2 0 1 1 7 4.6l.1.1a1.7 1.7 0 0 0 2.9-1.2 2 2 0 1 1 4 0 1.7 1.7 0 0 0 2.9 1.2l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0 .3 1.9" /></S>
+);
+export const IconLogout = ({ className = base }: P) => (
+  <S className={className}><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l5-5-5-5M15 12H3" /></S>
+);
+export const IconSearch = ({ className = base }: P) => (
+  <S className={className}><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></S>
+);
+export const IconPlus = ({ className = base }: P) => (
+  <S className={className}><path d="M12 5v14M5 12h14" /></S>
+);
+export const IconPencil = ({ className = base }: P) => (
+  <S className={className}><path d="M12 20h9" /><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" /></S>
+);
+export const IconTrash = ({ className = base }: P) => (
+  <S className={className}><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" /></S>
+);
+export const IconEye = ({ className = base }: P) => (
+  <S className={className}><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" /><circle cx="12" cy="12" r="3" /></S>
+);
+export const IconMenu = ({ className = base }: P) => (
+  <S className={className}><path d="M4 7h16M4 12h16M4 17h16" /></S>
+);
+export const IconClose = ({ className = base }: P) => (
+  <S className={className}><path d="M6 6l12 12M6 18 18 6" /></S>
+);
+export const IconLock = ({ className = base }: P) => (
+  <S className={className}><rect x="4" y="11" width="16" height="9" rx="2" /><path d="M8 11V7a4 4 0 0 1 8 0v4" /></S>
+);
+export const IconUser = ({ className = base }: P) => (
+  <S className={className}><circle cx="12" cy="8" r="3.5" /><path d="M5 20a7 7 0 0 1 14 0" /></S>
+);
+export const IconTrend = ({ className = base }: P) => (
+  <S className={className}><path d="M3 17l6-6 4 4 8-8M21 7v5h-5" /></S>
+);
+export const IconBell2 = ({ className = base }: P) => (
+  <S className={className}><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0" /></S>
+);
 
 export const ICONS: Record<string, (p: P) => React.ReactElement> = {
   bolt: IconBolt,

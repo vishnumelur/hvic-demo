@@ -48,7 +48,13 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
+          <Link
+            href="/login"
+            className="hidden text-sm font-semibold text-ink/70 transition-colors hover:text-primary md:inline-block"
+          >
+            Sign In
+          </Link>
           <Link
             href="/contact"
             className="btn-primary hidden rounded-full bg-primary px-7 py-2.5 text-sm font-semibold text-white hover:opacity-90 sm:inline-block"
@@ -80,6 +86,13 @@ export default function Navbar() {
                 {n.label}
               </Link>
             ))}
+            <Link
+              href="/login"
+              onClick={() => setOpen(false)}
+              className="rounded-xl px-3 py-2.5 font-medium text-ink/70 hover:bg-card hover:text-primary"
+            >
+              Sign In
+            </Link>
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
