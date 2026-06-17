@@ -1,10 +1,14 @@
-import { IconLeaf } from "@/components/ui/Icons";
-
-// Eco mark: rounded green tile with leaf glyph (matches reference).
+// Official Kerala HVIC emblem (sun · lightning · waves) on a clean white tile.
+// Rendered through one component so it appears identically everywhere
+// (navbar, footer, dashboard, login) at the size passed via className.
 export default function Logo({ className = "h-9 w-9" }: { className?: string }) {
   return (
-    <span className={`${className} grid place-items-center rounded-xl bg-primary text-white shadow-[0_6px_18px_-6px_rgba(0,109,64,0.7)]`}>
-      <IconLeaf className="h-[58%] w-[58%]" />
+    <span className={`${className} block shrink-0 overflow-hidden rounded-xl bg-white ring-1 ring-line`}>
+      <img
+        src="/logo.png"
+        alt="Kerala HVIC Foundation"
+        className="h-full w-full object-contain"
+      />
     </span>
   );
 }
