@@ -54,16 +54,20 @@ export default function Stats() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-3 lg:grid-cols-4 lg:gap-5">
           {STATS.map((s, i) => (
-            <Reveal key={s.label} delay={i * 70}>
-              <div className="hover-lift h-full rounded-[1.5rem] border border-line bg-card p-5 sm:rounded-[2rem] sm:p-6 lg:p-8">
-                <div className="font-display text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
+            <Reveal key={s.label} delay={i * 60}>
+              <div className="hover-lift flex h-full items-center gap-4 rounded-2xl border border-line bg-card p-4 lg:flex-col lg:items-start lg:rounded-[2rem] lg:p-8">
+                {/* Number — proportionally smaller than the heading on mobile */}
+                <div className="w-[4.5rem] shrink-0 font-display text-2xl font-extrabold tracking-tight text-ink lg:w-auto lg:text-5xl">
                   <Counter value={s.value} />
-                  <span className="ml-1 align-top text-base font-bold text-primary sm:ml-1.5 sm:text-xl">{s.unit}</span>
+                  <span className="ml-0.5 align-top text-xs font-bold text-primary lg:ml-1.5 lg:text-xl">{s.unit}</span>
                 </div>
-                <div className="mt-2 font-display text-base font-bold text-ink sm:mt-3 sm:text-lg">{s.label}</div>
-                <p className="mt-1.5 hidden text-sm leading-relaxed text-muted/70 sm:block">{s.sub}</p>
+                {/* Label + (desktop) description */}
+                <div className="min-w-0 flex-1 lg:mt-3 lg:flex-none">
+                  <div className="font-display text-base font-bold text-ink lg:text-lg">{s.label}</div>
+                  <p className="mt-1.5 hidden text-sm leading-relaxed text-muted/70 lg:block">{s.sub}</p>
+                </div>
               </div>
             </Reveal>
           ))}
