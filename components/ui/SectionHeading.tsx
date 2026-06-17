@@ -17,7 +17,7 @@ export default function SectionHeading({
         <p className="label-caps text-primary">{kicker}</p>
       </Reveal>
       <Reveal delay={80}>
-        <h2 className="mt-3 font-display text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
+        <h2 className="mt-3 text-balance font-display text-3xl font-extrabold tracking-tight text-ink sm:text-4xl lg:text-5xl">
           {title}
         </h2>
       </Reveal>

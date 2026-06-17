@@ -16,7 +16,7 @@ export default function PageHeader({
           <p className="label-caps text-primary">{kicker}</p>
         </Reveal>
         <Reveal delay={80}>
-          <h1 className="mt-4 max-w-4xl font-display text-5xl font-extrabold tracking-tight text-ink sm:text-6xl">
+          <h1 className="mt-4 max-w-4xl text-balance font-display text-4xl font-extrabold tracking-tight text-ink sm:text-5xl lg:text-6xl">
             {title}
           </h1>
         </Reveal>
