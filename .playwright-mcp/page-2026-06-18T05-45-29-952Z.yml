@@ -1,0 +1,147 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Kerala HVIC Foundation Kerala HVIC" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Kerala HVIC Foundation" [ref=e6]
+        - generic [ref=e7]: Kerala HVIC
+      - navigation [ref=e8]:
+        - link "സാങ്കേതികവിദ്യ" [ref=e9] [cursor=pointer]:
+          - /url: /programmes/
+        - link "മൂല്യ ശൃംഖല" [ref=e10] [cursor=pointer]:
+          - /url: /about/
+        - link "പദ്ധതികൾ" [ref=e11] [cursor=pointer]:
+          - /url: /gallery/
+        - link "വാർത്തകൾ" [ref=e12] [cursor=pointer]:
+          - /url: /news/
+        - link "ടെൻഡറുകൾ" [ref=e13] [cursor=pointer]:
+          - /url: /tenders/
+        - link "ബന്ധപ്പെടുക" [ref=e14] [cursor=pointer]:
+          - /url: /contact/
+      - link "സൈൻ ഇൻ" [ref=e16] [cursor=pointer]:
+        - /url: /login/
+  - main [ref=e17]:
+    - generic [ref=e19]:
+      - paragraph [ref=e21]: About the Foundation
+      - heading "A government engine for clean-energy innovation" [level=1] [ref=e23]
+      - paragraph [ref=e25]: Kerala HVIC Foundation was incorporated on 30 July 2025 as a Section 8, Companies Act 2013 — not-for-profit, established under Agency for New and Renewable Energy Research and Technology (ANERT) to implement the Hydrogen Valley Innovation Cluster in Kerala.
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - paragraph [ref=e30]: Purpose
+        - heading "The why behind the work" [level=2] [ref=e32]
+      - generic [ref=e33]:
+        - generic [ref=e35]:
+          - img [ref=e37]
+          - paragraph [ref=e40]: Vision
+          - paragraph [ref=e41]: To establish Kerala as an early supplier of green hydrogen and ammonia to global markets.
+        - generic [ref=e43]:
+          - img [ref=e45]
+          - paragraph [ref=e47]: Mission
+          - paragraph [ref=e48]: To architect a zero-carbon economy through precision engineering and world-scale hydrogen infrastructure across production, storage, distribution, applications and R&D.
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - paragraph [ref=e55]: Organisation profile
+          - heading "Who we are" [level=2] [ref=e57]
+        - generic [ref=e58]:
+          - generic [ref=e60]:
+            - term [ref=e61]: Legal form
+            - definition [ref=e62]: Section 8, Companies Act 2013 — not-for-profit
+          - generic [ref=e64]:
+            - term [ref=e65]: Parent agency
+            - definition [ref=e66]: Agency for New and Renewable Energy Research and Technology (ANERT)
+          - generic [ref=e68]:
+            - term [ref=e69]: Incorporated
+            - definition [ref=e70]: 30 July 2025
+          - generic [ref=e72]:
+            - term [ref=e73]: Mandate
+            - definition [ref=e74]: Implement the Hydrogen Valley Innovation Cluster initiatives in Kerala
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - paragraph [ref=e78]: Journey so far
+          - heading "Milestones" [level=2] [ref=e80]
+        - list [ref=e81]:
+          - listitem [ref=e83]:
+            - generic [ref=e88]:
+              - paragraph [ref=e89]: Jun 2025
+              - paragraph [ref=e90]: ₹133 Cr Hydrogen Valley Innovation Cluster approved under the National Green Hydrogen Mission.
+          - listitem [ref=e92]:
+            - generic [ref=e97]:
+              - paragraph [ref=e98]: 29 Jul 2025
+              - paragraph [ref=e99]: Kerala HVIC Foundation incorporated as a Section 8 not-for-profit company.
+          - listitem [ref=e101]:
+            - generic [ref=e106]:
+              - paragraph [ref=e107]: 30 Jul 2025
+              - paragraph [ref=e108]: Letter of Award received; the Foundation begins operationalising the cluster.
+          - listitem [ref=e110]:
+            - generic [ref=e114]:
+              - paragraph [ref=e115]: 01 Feb 2026
+              - paragraph [ref=e116]: MoA exchanged with CIAL for the ₹8.7 Cr hydrogen-bus programme.
+    - generic [ref=e118]:
+      - generic [ref=e119]:
+        - paragraph [ref=e121]: Leadership
+        - heading "The team steering the cluster" [level=2] [ref=e123]
+        - paragraph [ref=e125]: Kerala HVIC Foundation is governed by senior officers drawn from ANERT and the Government of Kerala, bringing deep domain expertise in energy, infrastructure, and policy.
+      - generic [ref=e126]:
+        - generic [ref=e128]:
+          - generic [ref=e130]: D
+          - paragraph [ref=e131]: Director
+          - paragraph [ref=e132]: Kerala HVIC Foundation
+          - generic [ref=e133]: ANERT
+        - generic [ref=e135]:
+          - generic [ref=e137]: CE
+          - paragraph [ref=e138]: Chief Executive Officer
+          - paragraph [ref=e139]: Operations & Strategy
+          - generic [ref=e140]: HVIC
+        - generic [ref=e142]:
+          - generic [ref=e144]: HT
+          - paragraph [ref=e145]: Head — Technology
+          - paragraph [ref=e146]: Value-chain & R&D
+          - generic [ref=e147]: HVIC
+        - generic [ref=e149]:
+          - generic [ref=e151]: HP
+          - paragraph [ref=e152]: Head — Partnerships
+          - paragraph [ref=e153]: Industry & Government
+          - generic [ref=e154]: HVIC
+  - contentinfo [ref=e155]:
+    - generic [ref=e157]:
+      - generic [ref=e158]:
+        - generic [ref=e159]:
+          - img "Kerala HVIC Foundation" [ref=e161]
+          - generic [ref=e162]: Kerala HVIC
+        - paragraph [ref=e163]: നൂതന നയങ്ങളിലൂടെയും കൃത്യതയാർന്ന എഞ്ചിനീയറിങ്ങിലൂടെയും സുസ്ഥിരവും ഹൈഡ്രജൻ അധിഷ്ഠിതവുമായ ആവാസവ്യവസ്ഥയിലേക്കുള്ള പരിവർത്തനത്തിന് നേതൃത്വം നൽകുന്നു.
+        - paragraph [ref=e164]: © 2026 Kerala HVIC Foundation · കേരള സർക്കാർ · ANERT
+      - generic [ref=e165]:
+        - generic [ref=e166]:
+          - heading "തന്ത്രം" [level=4] [ref=e167]
+          - list [ref=e168]:
+            - listitem [ref=e169]:
+              - link "രൂപരേഖ" [ref=e170] [cursor=pointer]:
+                - /url: /programmes/
+            - listitem [ref=e171]:
+              - link "നയ ചട്ടക്കൂട്" [ref=e172] [cursor=pointer]:
+                - /url: /about/
+        - generic [ref=e173]:
+          - heading "ആവാസവ്യവസ്ഥ" [level=4] [ref=e174]
+          - list [ref=e175]:
+            - listitem [ref=e176]:
+              - link "പദ്ധതികൾ" [ref=e177] [cursor=pointer]:
+                - /url: /gallery/
+            - listitem [ref=e178]:
+              - link "വാർത്തകളും ESG-യും" [ref=e179] [cursor=pointer]:
+                - /url: /news/
+        - generic [ref=e180]:
+          - heading "ബന്ധപ്പെടുക" [level=4] [ref=e181]
+          - list [ref=e182]:
+            - listitem [ref=e183]:
+              - link "ടെൻഡറുകളും ജോലികളും" [ref=e184] [cursor=pointer]:
+                - /url: /tenders/
+            - listitem [ref=e185]:
+              - link "അന്വേഷണങ്ങൾ" [ref=e186] [cursor=pointer]:
+                - /url: /contact/
+        - generic [ref=e187]:
+          - link "info@keralahvic.org" [ref=e188] [cursor=pointer]:
+            - /url: mailto:info@keralahvic.org
+          - link "+91 471 233 3124" [ref=e189] [cursor=pointer]:
+            - /url: tel:+91 471 233 3124
+  - alert [ref=e190]

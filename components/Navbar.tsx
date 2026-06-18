@@ -35,7 +35,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Lock body scroll while the menu is open
+  // Lock body scroll while the mobile menu is open
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
@@ -60,13 +60,31 @@ export default function Navbar() {
             <span className="whitespace-nowrap font-display text-xl font-extrabold tracking-tight text-ink">Kerala HVIC</span>
           </Link>
 
-          {/* Same control on every width: language toggle (home only) + menu button */}
+          {/* Desktop horizontal nav */}
+          <nav className="hidden items-center gap-4 lg:flex xl:gap-7">
+            {NAV.map((n) => (
+              <Link
+                key={n.href}
+                href={n.href}
+                className="whitespace-nowrap text-sm font-medium text-ink/60 transition-colors hover:text-primary xl:text-[15px]"
+              >
+                {n.label}
+              </Link>
+            ))}
+          </nav>
+
           <div className="flex shrink-0 items-center gap-2 sm:gap-3">
             {isHome && <LangToggle />}
+            <Link
+              href="/login"
+              className="btn-primary hidden whitespace-nowrap rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white hover:opacity-90 lg:inline-flex"
+            >
+              {t.nav.signIn}
+            </Link>
             <button
               aria-label="Open menu"
               onClick={() => setOpen(true)}
-              className="grid h-10 w-10 place-items-center rounded-full text-ink transition-colors hover:bg-card"
+              className="grid h-10 w-10 place-items-center rounded-full text-ink transition-colors hover:bg-card lg:hidden"
             >
               <IconMenu className="h-5 w-5" />
             </button>
@@ -74,9 +92,9 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Full-screen menu (same on desktop and mobile) */}
+      {/* Full-screen mobile menu (mobile/tablet only) */}
       {open && (
-        <div className="animate-fade fixed inset-0 z-[60] bg-bg">
+        <div className="animate-fade fixed inset-0 z-[60] bg-bg lg:hidden">
           <div className="hero-glow pointer-events-none absolute inset-0" />
 
           <div className="relative mx-auto flex h-dvh w-full max-w-lg flex-col">

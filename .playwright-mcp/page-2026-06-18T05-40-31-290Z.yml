@@ -1,0 +1,261 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Kerala HVIC Foundation Kerala HVIC" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Kerala HVIC Foundation" [ref=e6]
+        - generic [ref=e7]: Kerala HVIC
+      - navigation [ref=e8]:
+        - link "Technology" [ref=e9] [cursor=pointer]:
+          - /url: /programmes/
+        - link "Value Chain" [ref=e10] [cursor=pointer]:
+          - /url: /about/
+        - link "Projects" [ref=e11] [cursor=pointer]:
+          - /url: /gallery/
+        - link "News" [ref=e12] [cursor=pointer]:
+          - /url: /news/
+        - link "Tenders" [ref=e13] [cursor=pointer]:
+          - /url: /tenders/
+        - link "Contact" [ref=e14] [cursor=pointer]:
+          - /url: /contact/
+      - generic [ref=e15]:
+        - group "Language" [ref=e16]:
+          - button "English" [pressed] [ref=e17]: EN
+          - button "മലയാളം" [ref=e18]: മ
+        - link "Sign In" [ref=e19] [cursor=pointer]:
+          - /url: /login/
+  - main [ref=e20]:
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e26]: Energy Innovation Leader 2026
+        - heading "Powering Hydrogen Innovation" [level=1] [ref=e27]
+        - paragraph [ref=e28]: Architecting a zero-carbon economy through precision engineering and world-scale hydrogen infrastructure. Kerala's gateway to the future of clean energy.
+        - generic [ref=e29]:
+          - link "Explore Strategy" [ref=e30] [cursor=pointer]:
+            - /url: /programmes/
+            - text: Explore Strategy
+            - img [ref=e31]
+          - link "Technical Specs" [ref=e33] [cursor=pointer]:
+            - /url: /about/
+      - generic [ref=e35]:
+        - img "Green hydrogen logistics corridor through Kerala's hills" [ref=e36]
+        - generic [ref=e38]:
+          - generic [ref=e39]: 94.2%
+          - generic [ref=e40]: Grid Purity
+        - generic [ref=e44]: Statewide H₂ corridor · Live
+    - generic [ref=e48]:
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - paragraph [ref=e51]: Precision Data
+          - heading "Ecosystem Metrics" [level=2] [ref=e52]
+        - generic [ref=e55]: Live Pulse
+      - generic [ref=e56]:
+        - generic [ref=e58]:
+          - generic [ref=e59]: 0CR
+          - generic [ref=e60]:
+            - generic [ref=e61]: Pilot Fund
+            - paragraph [ref=e62]: Phase 1 capital allocated for urban mobility infrastructure.
+        - generic [ref=e64]:
+          - generic [ref=e65]: 0T
+          - generic [ref=e66]:
+            - generic [ref=e67]: Green H₂ / YR
+            - paragraph [ref=e68]: Current annual production capacity for export-grade hydrogen.
+        - generic [ref=e70]:
+          - generic [ref=e71]: 0HUBS
+          - generic [ref=e72]:
+            - generic [ref=e73]: Active Grid
+            - paragraph [ref=e74]: Refuelling nodes integrated into the statewide mobility corridor.
+        - generic [ref=e76]:
+          - generic [ref=e77]: 0GW
+          - generic [ref=e78]:
+            - generic [ref=e79]: Electrolyser
+            - paragraph [ref=e80]: Strategic goal for regional manufacturing autonomy.
+    - generic [ref=e82]:
+      - generic [ref=e83]:
+        - paragraph [ref=e85]: Strategic Roadmap
+        - heading "Architecture of a Sustainable Future" [level=2] [ref=e87]
+      - generic [ref=e88]:
+        - article [ref=e90]:
+          - generic [ref=e91]:
+            - img "Urban Hydrogen Mobility" [ref=e92]
+            - generic [ref=e93]:
+              - generic [ref=e94]: Transport
+              - generic [ref=e95]: Active
+          - generic [ref=e96]:
+            - paragraph [ref=e97]: Deployment Phase
+            - heading "Urban Hydrogen Mobility" [level=3] [ref=e98]
+            - paragraph [ref=e99]: A fleet of fuel-cell buses connecting major industrial and tourism corridors, powered entirely by Kerala's green energy grid — including three hydrogen buses at CIAL (₹8.7 Cr).
+            - link "View Roadmap" [ref=e100] [cursor=pointer]:
+              - /url: /programmes/
+              - text: View Roadmap
+              - img [ref=e101]
+        - article [ref=e104]:
+          - generic [ref=e105]:
+            - img "Heavy Transport Systems" [ref=e106]
+            - generic [ref=e107]:
+              - generic [ref=e108]: Freight
+              - generic [ref=e109]: Active
+          - generic [ref=e110]:
+            - paragraph [ref=e111]: Industrial Logistics
+            - heading "Heavy Transport Systems" [level=3] [ref=e112]
+            - paragraph [ref=e113]: Transforming the logistics backbone of South India with high-pressure refuelling stations and green-freight incentives for heavy fleet operators.
+            - link "View Roadmap" [ref=e114] [cursor=pointer]:
+              - /url: /programmes/
+              - text: View Roadmap
+              - img [ref=e115]
+        - article [ref=e118]:
+          - generic [ref=e119]:
+            - img "Hydrogen Houseboats" [ref=e120]
+            - generic [ref=e121]:
+              - generic [ref=e122]: Tourism
+              - generic [ref=e123]: Pilot
+          - generic [ref=e124]:
+            - paragraph [ref=e125]: Water Transport
+            - heading "Hydrogen Houseboats" [level=3] [ref=e126]
+            - paragraph [ref=e127]: Clean-fuel houseboats for Kerala's iconic backwaters, in partnership with the Kerala State Water Transport Department — decarbonising tourism at its source.
+            - link "View Roadmap" [ref=e128] [cursor=pointer]:
+              - /url: /programmes/
+              - text: View Roadmap
+              - img [ref=e129]
+        - article [ref=e132]:
+          - generic [ref=e133]:
+            - img "Kochi Green Hydrogen Hub" [ref=e134]
+            - generic [ref=e135]:
+              - generic [ref=e136]: Energy
+              - generic [ref=e137]: Staging
+          - generic [ref=e138]:
+            - paragraph [ref=e139]: Infrastructure
+            - heading "Kochi Green Hydrogen Hub" [level=3] [ref=e140]
+            - paragraph [ref=e141]: A flagship hub with a 1 GW electrolyser and 120 kTPA capacity, developed with GIZ and the Government of Kerala.
+            - link "View Roadmap" [ref=e142] [cursor=pointer]:
+              - /url: /programmes/
+              - text: View Roadmap
+              - img [ref=e143]
+    - generic [ref=e150]:
+      - generic [ref=e151]:
+        - paragraph [ref=e152]: Live Network
+        - heading "Ecosystem Map" [level=2] [ref=e153]
+        - paragraph [ref=e154]: Live distribution of hydrogen hubs and refuelling nodes across Kerala — from Kannur to Thiruvananthapuram.
+        - generic [ref=e155]:
+          - generic [ref=e156]:
+            - generic [ref=e157]: "12"
+            - generic [ref=e158]: Hubs
+          - generic [ref=e159]:
+            - generic [ref=e160]: "7"
+            - generic [ref=e161]: Districts
+          - generic [ref=e162]:
+            - generic [ref=e163]: 100%
+            - generic [ref=e164]: Renewable
+      - generic [ref=e166]:
+        - img "Map of Kerala hydrogen hubs" [ref=e167]
+        - generic [ref=e187]: Kerala
+    - generic [ref=e188]:
+      - paragraph [ref=e191]: Built with Kerala's leading institutions
+      - generic [ref=e193]:
+        - generic [ref=e194]: ANERT
+        - generic [ref=e195]: CSIR-NIIST
+        - generic [ref=e196]: C-DAC
+        - generic [ref=e197]: IIT Palakkad
+        - generic [ref=e198]: IISER
+        - generic [ref=e199]: KMRL
+        - generic [ref=e200]: KSRTC
+        - generic [ref=e201]: BPCL
+        - generic [ref=e202]: ANERT
+        - generic [ref=e203]: CSIR-NIIST
+        - generic [ref=e204]: C-DAC
+        - generic [ref=e205]: IIT Palakkad
+        - generic [ref=e206]: IISER
+        - generic [ref=e207]: KMRL
+        - generic [ref=e208]: KSRTC
+        - generic [ref=e209]: BPCL
+    - generic [ref=e211]:
+      - generic [ref=e212]:
+        - generic [ref=e213]:
+          - paragraph [ref=e215]: Newsroom
+          - heading "Latest News & Notifications" [level=2] [ref=e217]
+        - link "View all" [ref=e219] [cursor=pointer]:
+          - /url: /news/
+          - text: View all
+          - img [ref=e220]
+      - generic [ref=e222]:
+        - link "01 Feb 2026 Mobility MoA signed with CIAL for ₹8.7 Cr hydrogen-bus project Kerala HVIC Foundation and Cochin International Airport Limited exchanged a Memorandum of Agreement for three hydrogen-powered buses." [ref=e224] [cursor=pointer]:
+          - /url: /news/
+          - generic [ref=e225]: 01 Feb 2026
+          - generic [ref=e226]: Mobility
+          - generic [ref=e227]:
+            - generic [ref=e228]: MoA signed with CIAL for ₹8.7 Cr hydrogen-bus project
+            - generic [ref=e229]: Kerala HVIC Foundation and Cochin International Airport Limited exchanged a Memorandum of Agreement for three hydrogen-powered buses.
+        - link "30 Jul 2025 Milestone Kerala HVIC Foundation receives Letter of Award The Foundation is formally established as a Section 8 company under ANERT to operationalise the Hydrogen Valley Innovation Cluster." [ref=e231] [cursor=pointer]:
+          - /url: /news/
+          - generic [ref=e232]: 30 Jul 2025
+          - generic [ref=e233]: Milestone
+          - generic [ref=e234]:
+            - generic [ref=e235]: Kerala HVIC Foundation receives Letter of Award
+            - generic [ref=e236]: The Foundation is formally established as a Section 8 company under ANERT to operationalise the Hydrogen Valley Innovation Cluster.
+        - link "15 Jun 2025 Mission ₹133 Cr Hydrogen Valley cluster approved Under the National Green Hydrogen Mission, Kerala secures approval for a Hydrogen Valley Innovation Cluster targeting 57 tonnes of green H₂." [ref=e238] [cursor=pointer]:
+          - /url: /news/
+          - generic [ref=e239]: 15 Jun 2025
+          - generic [ref=e240]: Mission
+          - generic [ref=e241]:
+            - generic [ref=e242]: ₹133 Cr Hydrogen Valley cluster approved
+            - generic [ref=e243]: Under the National Green Hydrogen Mission, Kerala secures approval for a Hydrogen Valley Innovation Cluster targeting 57 tonnes of green H₂.
+        - link "10 May 2025 Partnership GIZ joins Kochi Green Hydrogen Hub development The German Development Agency partners with the Government of Kerala on the 1 GW Kochi Green Hydrogen Hub." [ref=e245] [cursor=pointer]:
+          - /url: /news/
+          - generic [ref=e246]: 10 May 2025
+          - generic [ref=e247]: Partnership
+          - generic [ref=e248]:
+            - generic [ref=e249]: GIZ joins Kochi Green Hydrogen Hub development
+            - generic [ref=e250]: The German Development Agency partners with the Government of Kerala on the 1 GW Kochi Green Hydrogen Hub.
+    - generic [ref=e257]:
+      - paragraph [ref=e258]: Join the cluster
+      - heading "Partner with Kerala's hydrogen revolution" [level=2] [ref=e259]
+      - paragraph [ref=e260]: Industry, research and government — working as one cluster. Explore collaboration, tenders and career opportunities with the Foundation.
+      - generic [ref=e261]:
+        - link "Get in touch" [ref=e262] [cursor=pointer]:
+          - /url: /contact/
+          - text: Get in touch
+          - img [ref=e263]
+        - link "Tenders & Careers" [ref=e265] [cursor=pointer]:
+          - /url: /tenders/
+  - contentinfo [ref=e266]:
+    - generic [ref=e268]:
+      - generic [ref=e269]:
+        - generic [ref=e270]:
+          - img "Kerala HVIC Foundation" [ref=e272]
+          - generic [ref=e273]: Kerala HVIC
+        - paragraph [ref=e274]: Leading the transition to a sustainable, hydrogen-powered ecosystem through innovative policy and precision engineering.
+        - paragraph [ref=e275]: © 2026 Kerala HVIC Foundation · Govt. of Kerala · ANERT
+      - generic [ref=e276]:
+        - generic [ref=e277]:
+          - heading "Strategy" [level=4] [ref=e278]
+          - list [ref=e279]:
+            - listitem [ref=e280]:
+              - link "Roadmap" [ref=e281] [cursor=pointer]:
+                - /url: /programmes/
+            - listitem [ref=e282]:
+              - link "Policy Framework" [ref=e283] [cursor=pointer]:
+                - /url: /about/
+        - generic [ref=e284]:
+          - heading "Ecosystem" [level=4] [ref=e285]
+          - list [ref=e286]:
+            - listitem [ref=e287]:
+              - link "Projects" [ref=e288] [cursor=pointer]:
+                - /url: /gallery/
+            - listitem [ref=e289]:
+              - link "News & ESG" [ref=e290] [cursor=pointer]:
+                - /url: /news/
+        - generic [ref=e291]:
+          - heading "Contact" [level=4] [ref=e292]
+          - list [ref=e293]:
+            - listitem [ref=e294]:
+              - link "Tenders & Careers" [ref=e295] [cursor=pointer]:
+                - /url: /tenders/
+            - listitem [ref=e296]:
+              - link "Inquiries" [ref=e297] [cursor=pointer]:
+                - /url: /contact/
+        - generic [ref=e298]:
+          - link "info@keralahvic.org" [ref=e299] [cursor=pointer]:
+            - /url: mailto:info@keralahvic.org
+          - link "+91 471 233 3124" [ref=e300] [cursor=pointer]:
+            - /url: tel:+91 471 233 3124
+  - alert [ref=e301]
