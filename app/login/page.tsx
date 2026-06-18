@@ -81,10 +81,10 @@ export default function LoginPage() {
       {/* Form column */}
       <div className="hero-glow relative flex flex-col lg:items-center lg:justify-center lg:px-6 lg:py-12">
         {/* Mobile brand hero */}
-        <div className="relative h-56 w-full shrink-0 overflow-hidden lg:hidden">
+        <div className="relative h-40 w-full shrink-0 overflow-hidden sm:h-56 lg:hidden">
           <img src="/img/energy.jpg" alt="" className="absolute inset-0 h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-primary-700/95 via-primary/75 to-primary/40" />
-          <div className="relative flex h-full flex-col justify-between p-6 pb-14 text-white">
+          <div className="relative flex h-full flex-col justify-between p-5 pb-6 sm:p-6 sm:pb-12 text-white">
             <Link href="/" className="flex items-center gap-2.5">
               <span className="grid h-9 w-9 place-items-center rounded-xl bg-white/15 backdrop-blur-md">
                 <Logo className="h-9 w-9" />
@@ -95,7 +95,7 @@ export default function LoginPage() {
               <span className="label-caps inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-3 py-1 text-[10px] backdrop-blur-md">
                 <span className="h-1.5 w-1.5 rounded-full bg-white" /> Admin Console
               </span>
-              <h2 className="mt-3 max-w-[16rem] font-display text-2xl font-extrabold leading-tight">
+              <h2 className="mt-2 max-w-[16rem] font-display text-xl font-extrabold leading-tight sm:mt-3 sm:text-2xl">
                 Powering Kerala&apos;s hydrogen future.
               </h2>
             </div>
@@ -103,13 +103,13 @@ export default function LoginPage() {
         </div>
 
         {/* Form sheet (card on mobile, plain on desktop) */}
-        <div className="relative z-10 mx-auto -mt-8 w-full max-w-md px-4 pb-12 lg:mt-0 lg:px-0 lg:pb-0">
-          <div className="rounded-[1.75rem] border border-line bg-white p-6 premium-shadow sm:p-8 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none">
+        <div className="relative z-10 mx-auto -mt-8 w-full max-w-md px-4 pb-8 lg:mt-0 lg:px-0 lg:pb-0">
+          <div className="rounded-[1.75rem] border border-line bg-white p-5 premium-shadow sm:p-8 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none">
             <p className="label-caps hidden text-primary lg:block">Admin Console</p>
             <h1 className="font-display text-3xl font-extrabold tracking-tight text-ink sm:text-4xl lg:mt-3">Welcome back</h1>
             <p className="mt-2 text-muted">Sign in to manage your console.</p>
 
-            <form onSubmit={submit} className="mt-7 space-y-5">
+            <form onSubmit={submit} className="mt-5 space-y-4">
               <label className="block">
                 <span className="text-sm font-medium text-ink">Email</span>
                 <div className={fieldWrap}>
@@ -135,7 +135,7 @@ export default function LoginPage() {
               </button>
             </form>
 
-            <div className="mt-6 rounded-2xl border border-dashed border-primary/25 bg-primary/5 p-4">
+            <div className="mt-5 rounded-2xl border border-dashed border-primary/25 bg-primary/5 p-4">
               <div className="flex items-center justify-between gap-3">
                 <p className="label-caps text-[10px] text-primary">Demo credentials</p>
                 <button
@@ -151,7 +151,7 @@ export default function LoginPage() {
               </dl>
             </div>
 
-            <Link href="/" className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-muted hover:text-primary">← Back to website</Link>
+            <Link href="/" className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-muted hover:text-primary">← Back to website</Link>
           </div>
         </div>
       </div>
