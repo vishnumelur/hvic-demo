@@ -29,14 +29,14 @@ export default function Hero() {
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <Link
               href="/programmes"
-              className="btn-primary premium-shadow inline-flex items-center gap-2 rounded-2xl bg-ink px-7 py-4 font-semibold text-white"
+              className="btn-primary premium-shadow inline-flex min-w-[12.5rem] items-center justify-center gap-2 whitespace-nowrap rounded-2xl bg-ink px-7 py-4 font-semibold text-white"
             >
               {t.hero.explore}
               <IconArrowRight className="h-5 w-5" />
             </Link>
             <Link
               href="/about"
-              className="glass-card rounded-2xl px-7 py-4 font-medium text-ink transition-colors hover:bg-white"
+              className="glass-card inline-flex min-w-[10.5rem] items-center justify-center whitespace-nowrap rounded-2xl px-7 py-4 font-medium text-ink transition-colors hover:bg-white"
             >
               {t.hero.specs}
             </Link>
