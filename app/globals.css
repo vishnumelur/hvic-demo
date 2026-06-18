@@ -218,5 +218,11 @@ html[lang="ml"] .label-caps {
 html[lang="ml"] h1,
 html[lang="ml"] h2,
 html[lang="ml"] h3 {
-  line-height: 1.3;
+  line-height: 1.4;
+}
+/* Malayalam display glyphs are tall + stacked — the giant Latin hero size
+   overlaps and dominates. Use a smaller, roomier size for Malayalam. */
+html[lang="ml"] .hero-title {
+  font-size: clamp(1.9rem, 5vw, 3.4rem);
+  line-height: 1.45;
 }

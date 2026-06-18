@@ -16,7 +16,7 @@ export default function Hero() {
             <span className="label-caps text-[10px]">{t.hero.badge}</span>
           </div>
 
-          <h1 className="mt-7 font-display text-[clamp(2.5rem,7vw,5rem)] leading-tight text-ink">
+          <h1 className="hero-title mt-7 font-display text-[clamp(2.5rem,7vw,5rem)] leading-tight text-ink">
             {t.hero.lead && <>{t.hero.lead} </>}
             <span className="accent-italic">{t.hero.accent}</span>{" "}
             {t.hero.tail}
