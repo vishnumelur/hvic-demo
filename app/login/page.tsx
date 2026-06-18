@@ -80,7 +80,7 @@ export default function LoginPage() {
       {/* Form column — always a centered, self-contained card (no overlap at any width) */}
       <div className="hero-glow flex min-h-screen items-center justify-center p-5 sm:p-8 lg:p-10">
         <div className="w-full max-w-sm">
-          <div className="rounded-3xl border border-line bg-white p-6 premium-shadow sm:p-7 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none">
+          <div className="rounded-3xl border border-line bg-white p-6 shadow-[0_18px_50px_-12px_rgba(15,30,22,0.18)] sm:p-7 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none">
             {/* Contained brand banner (below lg only — gives the Kerala feel, no overlap) */}
             <div className="relative mb-6 h-24 overflow-hidden rounded-2xl lg:hidden">
               <img src="/img/energy.jpg" alt="" className="absolute inset-0 h-full w-full object-cover" />
