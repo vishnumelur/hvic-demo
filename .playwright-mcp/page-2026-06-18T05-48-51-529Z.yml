@@ -1,0 +1,261 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Kerala HVIC Foundation Kerala HVIC" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Kerala HVIC Foundation" [ref=e6]
+        - generic [ref=e7]: Kerala HVIC
+      - navigation [ref=e8]:
+        - link "സാങ്കേതികവിദ്യ" [ref=e9] [cursor=pointer]:
+          - /url: /programmes/
+        - link "മൂല്യ ശൃംഖല" [ref=e10] [cursor=pointer]:
+          - /url: /about/
+        - link "പദ്ധതികൾ" [ref=e11] [cursor=pointer]:
+          - /url: /gallery/
+        - link "വാർത്തകൾ" [ref=e12] [cursor=pointer]:
+          - /url: /news/
+        - link "ടെൻഡറുകൾ" [ref=e13] [cursor=pointer]:
+          - /url: /tenders/
+        - link "ബന്ധപ്പെടുക" [ref=e14] [cursor=pointer]:
+          - /url: /contact/
+      - generic [ref=e15]:
+        - group "Language" [ref=e16]:
+          - button "English" [ref=e17]: EN
+          - button "മലയാളം" [pressed] [ref=e18]: മ
+        - link "സൈൻ ഇൻ" [ref=e19] [cursor=pointer]:
+          - /url: /login/
+  - main [ref=e20]:
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e26]: ഊർജ്ജ നവീകരണ നായകൻ 2026
+        - heading "ഹൈഡ്രജൻ നവീകരണത്തിന് ഊർജ്ജം പകരുന്നു" [level=1] [ref=e27]
+        - paragraph [ref=e28]: കൃത്യതയാർന്ന എഞ്ചിനീയറിങ്ങിലൂടെയും ലോകോത്തര ഹൈഡ്രജൻ അടിസ്ഥാന സൗകര്യങ്ങളിലൂടെയും കാർബൺ-രഹിത സമ്പദ്‌വ്യവസ്ഥ കെട്ടിപ്പടുക്കുന്നു. ശുദ്ധ ഊർജ്ജത്തിന്റെ ഭാവിയിലേക്കുള്ള കേരളത്തിന്റെ കവാടം.
+        - generic [ref=e29]:
+          - link "തിരയുക" [ref=e30] [cursor=pointer]:
+            - /url: /programmes/
+            - text: തിരയുക
+            - img [ref=e31]
+          - link "വിശദാംശങ്ങൾ" [ref=e33] [cursor=pointer]:
+            - /url: /about/
+      - generic [ref=e35]:
+        - img "Green hydrogen logistics corridor through Kerala's hills" [ref=e36]
+        - generic [ref=e38]:
+          - generic [ref=e39]: 94.2%
+          - generic [ref=e40]: ഗ്രിഡ് ശുദ്ധി
+        - generic [ref=e44]: സംസ്ഥാനവ്യാപക H₂ ഇടനാഴി · ലൈവ്
+    - generic [ref=e48]:
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - paragraph [ref=e51]: കൃത്യമായ വിവരങ്ങൾ
+          - heading "ആവാസവ്യവസ്ഥ സൂചകങ്ങൾ" [level=2] [ref=e52]
+        - generic [ref=e55]: ലൈവ് പൾസ്
+      - generic [ref=e56]:
+        - generic [ref=e58]:
+          - generic [ref=e59]: 0CR
+          - generic [ref=e60]:
+            - generic [ref=e61]: പൈലറ്റ് ഫണ്ട്
+            - paragraph [ref=e62]: നഗര ഗതാഗത അടിസ്ഥാന സൗകര്യങ്ങൾക്കായി ഘട്ടം 1-ൽ അനുവദിച്ച മൂലധനം.
+        - generic [ref=e64]:
+          - generic [ref=e65]: 0T
+          - generic [ref=e66]:
+            - generic [ref=e67]: ഹരിത H₂ / വർഷം
+            - paragraph [ref=e68]: കയറ്റുമതി നിലവാരമുള്ള ഹൈഡ്രജന്റെ നിലവിലെ വാർഷിക ഉത്പാദന ശേഷി.
+        - generic [ref=e70]:
+          - generic [ref=e71]: 0HUBS
+          - generic [ref=e72]:
+            - generic [ref=e73]: സജീവ ഗ്രിഡ്
+            - paragraph [ref=e74]: സംസ്ഥാനവ്യാപക ഗതാഗത ഇടനാഴിയിൽ സംയോജിപ്പിച്ച ഇന്ധനം നിറയ്ക്കൽ കേന്ദ്രങ്ങൾ.
+        - generic [ref=e76]:
+          - generic [ref=e77]: 0GW
+          - generic [ref=e78]:
+            - generic [ref=e79]: ഇലക്ട്രോലൈസർ
+            - paragraph [ref=e80]: പ്രാദേശിക നിർമ്മാണ സ്വയംപര്യാപ്തതയ്ക്കുള്ള തന്ത്രപരമായ ലക്ഷ്യം.
+    - generic [ref=e82]:
+      - generic [ref=e83]:
+        - paragraph [ref=e85]: തന്ത്രപരമായ രൂപരേഖ
+        - heading "സുസ്ഥിര ഭാവിയുടെ ശില്പഘടന" [level=2] [ref=e87]
+      - generic [ref=e88]:
+        - article [ref=e90]:
+          - generic [ref=e91]:
+            - img "നഗര ഹൈഡ്രജൻ ഗതാഗതം" [ref=e92]
+            - generic [ref=e93]:
+              - generic [ref=e94]: ഗതാഗതം
+              - generic [ref=e95]: സജീവം
+          - generic [ref=e96]:
+            - paragraph [ref=e97]: വിന്യാസ ഘട്ടം
+            - heading "നഗര ഹൈഡ്രജൻ ഗതാഗതം" [level=3] [ref=e98]
+            - paragraph [ref=e99]: കേരളത്തിന്റെ ഹരിത ഊർജ്ജ ഗ്രിഡിൽ പ്രവർത്തിക്കുന്ന, പ്രധാന വ്യാവസായിക-വിനോദസഞ്ചാര ഇടനാഴികളെ ബന്ധിപ്പിക്കുന്ന ഫ്യൂവൽ-സെൽ ബസുകളുടെ നിര — CIAL-ലെ മൂന്ന് ഹൈഡ്രജൻ ബസുകൾ ഉൾപ്പെടെ (₹8.7 കോടി).
+            - link "രൂപരേഖ കാണുക" [ref=e100] [cursor=pointer]:
+              - /url: /programmes/
+              - text: രൂപരേഖ കാണുക
+              - img [ref=e101]
+        - article [ref=e104]:
+          - generic [ref=e105]:
+            - img "ഹെവി ട്രാൻസ്പോർട്ട് സംവിധാനങ്ങൾ" [ref=e106]
+            - generic [ref=e107]:
+              - generic [ref=e108]: ചരക്ക്
+              - generic [ref=e109]: സജീവം
+          - generic [ref=e110]:
+            - paragraph [ref=e111]: വ്യാവസായിക ലോജിസ്റ്റിക്സ്
+            - heading "ഹെവി ട്രാൻസ്പോർട്ട് സംവിധാനങ്ങൾ" [level=3] [ref=e112]
+            - paragraph [ref=e113]: ഉയർന്ന മർദ്ദത്തിലുള്ള ഇന്ധന കേന്ദ്രങ്ങളും ഹരിത-ചരക്ക് പ്രോത്സാഹനങ്ങളും വഴി ദക്ഷിണേന്ത്യയുടെ ലോജിസ്റ്റിക്സ് നട്ടെല്ലിനെ പരിവർത്തനം ചെയ്യുന്നു.
+            - link "രൂപരേഖ കാണുക" [ref=e114] [cursor=pointer]:
+              - /url: /programmes/
+              - text: രൂപരേഖ കാണുക
+              - img [ref=e115]
+        - article [ref=e118]:
+          - generic [ref=e119]:
+            - img "ഹൈഡ്രജൻ ഹൗസ്ബോട്ടുകൾ" [ref=e120]
+            - generic [ref=e121]:
+              - generic [ref=e122]: വിനോദസഞ്ചാരം
+              - generic [ref=e123]: പൈലറ്റ്
+          - generic [ref=e124]:
+            - paragraph [ref=e125]: ജല ഗതാഗതം
+            - heading "ഹൈഡ്രജൻ ഹൗസ്ബോട്ടുകൾ" [level=3] [ref=e126]
+            - paragraph [ref=e127]: കേരള സ്റ്റേറ്റ് വാട്ടർ ട്രാൻസ്പോർട്ട് വകുപ്പുമായി ചേർന്ന്, കേരളത്തിന്റെ പ്രശസ്തമായ കായലുകൾക്കായുള്ള ശുദ്ധ-ഇന്ധന ഹൗസ്ബോട്ടുകൾ — വിനോദസഞ്ചാരത്തെ ഉറവിടത്തിൽ തന്നെ കാർബൺ-മുക്തമാക്കുന്നു.
+            - link "രൂപരേഖ കാണുക" [ref=e128] [cursor=pointer]:
+              - /url: /programmes/
+              - text: രൂപരേഖ കാണുക
+              - img [ref=e129]
+        - article [ref=e132]:
+          - generic [ref=e133]:
+            - img "കൊച്ചി ഹരിത ഹൈഡ്രജൻ ഹബ്" [ref=e134]
+            - generic [ref=e135]:
+              - generic [ref=e136]: ഊർജ്ജം
+              - generic [ref=e137]: ഒരുങ്ങുന്നു
+          - generic [ref=e138]:
+            - paragraph [ref=e139]: അടിസ്ഥാന സൗകര്യം
+            - heading "കൊച്ചി ഹരിത ഹൈഡ്രജൻ ഹബ്" [level=3] [ref=e140]
+            - paragraph [ref=e141]: GIZ-ഉം കേരള സർക്കാരും ചേർന്ന് വികസിപ്പിക്കുന്ന, 1 GW ഇലക്ട്രോലൈസറും 120 kTPA ശേഷിയുമുള്ള മുൻനിര ഹബ്.
+            - link "രൂപരേഖ കാണുക" [ref=e142] [cursor=pointer]:
+              - /url: /programmes/
+              - text: രൂപരേഖ കാണുക
+              - img [ref=e143]
+    - generic [ref=e150]:
+      - generic [ref=e151]:
+        - paragraph [ref=e152]: ലൈവ് ശൃംഖല
+        - heading "ആവാസവ്യവസ്ഥ ഭൂപടം" [level=2] [ref=e153]
+        - paragraph [ref=e154]: കണ്ണൂർ മുതൽ തിരുവനന്തപുരം വരെ — കേരളത്തിലുടനീളമുള്ള ഹൈഡ്രജൻ ഹബുകളുടെയും ഇന്ധന കേന്ദ്രങ്ങളുടെയും തത്സമയ വിന്യാസം.
+        - generic [ref=e155]:
+          - generic [ref=e156]:
+            - generic [ref=e157]: "12"
+            - generic [ref=e158]: ഹബുകൾ
+          - generic [ref=e159]:
+            - generic [ref=e160]: "7"
+            - generic [ref=e161]: ജില്ലകൾ
+          - generic [ref=e162]:
+            - generic [ref=e163]: 100%
+            - generic [ref=e164]: പുനരുപയോഗം
+      - generic [ref=e166]:
+        - img "Map of Kerala hydrogen hubs" [ref=e167]
+        - generic [ref=e187]: കേരളം
+    - generic [ref=e188]:
+      - paragraph [ref=e191]: കേരളത്തിന്റെ മുൻനിര സ്ഥാപനങ്ങളുമായി ചേർന്ന്
+      - generic [ref=e193]:
+        - generic [ref=e194]: ANERT
+        - generic [ref=e195]: CSIR-NIIST
+        - generic [ref=e196]: C-DAC
+        - generic [ref=e197]: IIT Palakkad
+        - generic [ref=e198]: IISER
+        - generic [ref=e199]: KMRL
+        - generic [ref=e200]: KSRTC
+        - generic [ref=e201]: BPCL
+        - generic [ref=e202]: ANERT
+        - generic [ref=e203]: CSIR-NIIST
+        - generic [ref=e204]: C-DAC
+        - generic [ref=e205]: IIT Palakkad
+        - generic [ref=e206]: IISER
+        - generic [ref=e207]: KMRL
+        - generic [ref=e208]: KSRTC
+        - generic [ref=e209]: BPCL
+    - generic [ref=e211]:
+      - generic [ref=e212]:
+        - generic [ref=e213]:
+          - paragraph [ref=e215]: ന്യൂസ്റൂം
+          - heading "ഏറ്റവും പുതിയ വാർത്തകളും അറിയിപ്പുകളും" [level=2] [ref=e217]
+        - link "എല്ലാം കാണുക" [ref=e219] [cursor=pointer]:
+          - /url: /news/
+          - text: എല്ലാം കാണുക
+          - img [ref=e220]
+      - generic [ref=e222]:
+        - link "01 Feb 2026 ഗതാഗതം ₹8.7 കോടി ഹൈഡ്രജൻ-ബസ് പദ്ധതിക്കായി CIAL-മായി കരാർ ഒപ്പുവച്ചു മൂന്ന് ഹൈഡ്രജൻ ബസുകൾക്കായി കേരള HVIC ഫൗണ്ടേഷനും കൊച്ചിൻ ഇന്റർനാഷണൽ എയർപോർട്ട് ലിമിറ്റഡും ധാരണാപത്രം കൈമാറി." [ref=e224] [cursor=pointer]:
+          - /url: /news/
+          - generic [ref=e225]: 01 Feb 2026
+          - generic [ref=e226]: ഗതാഗതം
+          - generic [ref=e227]:
+            - generic [ref=e228]: ₹8.7 കോടി ഹൈഡ്രജൻ-ബസ് പദ്ധതിക്കായി CIAL-മായി കരാർ ഒപ്പുവച്ചു
+            - generic [ref=e229]: മൂന്ന് ഹൈഡ്രജൻ ബസുകൾക്കായി കേരള HVIC ഫൗണ്ടേഷനും കൊച്ചിൻ ഇന്റർനാഷണൽ എയർപോർട്ട് ലിമിറ്റഡും ധാരണാപത്രം കൈമാറി.
+        - link "30 Jul 2025 നാഴികക്കല്ല് കേരള HVIC ഫൗണ്ടേഷന് ലെറ്റർ ഓഫ് അവാർഡ് ലഭിച്ചു ഹൈഡ്രജൻ വാലി ഇന്നൊവേഷൻ ക്ലസ്റ്റർ പ്രവർത്തനക്ഷമമാക്കാൻ ANERT-ന് കീഴിൽ സെക്ഷൻ 8 കമ്പനിയായി ഫൗണ്ടേഷൻ ഔദ്യോഗികമായി സ്ഥാപിതമായി." [ref=e231] [cursor=pointer]:
+          - /url: /news/
+          - generic [ref=e232]: 30 Jul 2025
+          - generic [ref=e233]: നാഴികക്കല്ല്
+          - generic [ref=e234]:
+            - generic [ref=e235]: കേരള HVIC ഫൗണ്ടേഷന് ലെറ്റർ ഓഫ് അവാർഡ് ലഭിച്ചു
+            - generic [ref=e236]: ഹൈഡ്രജൻ വാലി ഇന്നൊവേഷൻ ക്ലസ്റ്റർ പ്രവർത്തനക്ഷമമാക്കാൻ ANERT-ന് കീഴിൽ സെക്ഷൻ 8 കമ്പനിയായി ഫൗണ്ടേഷൻ ഔദ്യോഗികമായി സ്ഥാപിതമായി.
+        - link "15 Jun 2025 ദൗത്യം ₹133 കോടി ഹൈഡ്രജൻ വാലി ക്ലസ്റ്ററിന് അംഗീകാരം ദേശീയ ഹരിത ഹൈഡ്രജൻ മിഷന് കീഴിൽ, 57 ടൺ ഹരിത H₂ ലക്ഷ്യമിടുന്ന ഹൈഡ്രജൻ വാലി ഇന്നൊവേഷൻ ക്ലസ്റ്ററിന് കേരളത്തിന് അംഗീകാരം ലഭിച്ചു." [ref=e238] [cursor=pointer]:
+          - /url: /news/
+          - generic [ref=e239]: 15 Jun 2025
+          - generic [ref=e240]: ദൗത്യം
+          - generic [ref=e241]:
+            - generic [ref=e242]: ₹133 കോടി ഹൈഡ്രജൻ വാലി ക്ലസ്റ്ററിന് അംഗീകാരം
+            - generic [ref=e243]: ദേശീയ ഹരിത ഹൈഡ്രജൻ മിഷന് കീഴിൽ, 57 ടൺ ഹരിത H₂ ലക്ഷ്യമിടുന്ന ഹൈഡ്രജൻ വാലി ഇന്നൊവേഷൻ ക്ലസ്റ്ററിന് കേരളത്തിന് അംഗീകാരം ലഭിച്ചു.
+        - link "10 May 2025 പങ്കാളിത്തം കൊച്ചി ഹരിത ഹൈഡ്രജൻ ഹബ് വികസനത്തിൽ GIZ പങ്കാളിയാകുന്നു 1 GW കൊച്ചി ഹരിത ഹൈഡ്രജൻ ഹബിൽ ജർമൻ വികസന ഏജൻസി കേരള സർക്കാരുമായി പങ്കാളിയാകുന്നു." [ref=e245] [cursor=pointer]:
+          - /url: /news/
+          - generic [ref=e246]: 10 May 2025
+          - generic [ref=e247]: പങ്കാളിത്തം
+          - generic [ref=e248]:
+            - generic [ref=e249]: കൊച്ചി ഹരിത ഹൈഡ്രജൻ ഹബ് വികസനത്തിൽ GIZ പങ്കാളിയാകുന്നു
+            - generic [ref=e250]: 1 GW കൊച്ചി ഹരിത ഹൈഡ്രജൻ ഹബിൽ ജർമൻ വികസന ഏജൻസി കേരള സർക്കാരുമായി പങ്കാളിയാകുന്നു.
+    - generic [ref=e257]:
+      - paragraph [ref=e258]: ക്ലസ്റ്ററിൽ ചേരൂ
+      - heading "കേരളത്തിന്റെ ഹൈഡ്രജൻ വിപ്ലവത്തിൽ" [level=2] [ref=e259]
+      - paragraph [ref=e260]: വ്യവസായവും ഗവേഷണവും സർക്കാരും — ഒരൊറ്റ ക്ലസ്റ്ററായി പ്രവർത്തിക്കുന്നു. ഫൗണ്ടേഷനുമായുള്ള സഹകരണം, ടെൻഡറുകൾ, തൊഴിലവസരങ്ങൾ എന്നിവ പര്യവേക്ഷണം ചെയ്യൂ.
+      - generic [ref=e261]:
+        - link "ബന്ധപ്പെടുക" [ref=e262] [cursor=pointer]:
+          - /url: /contact/
+          - text: ബന്ധപ്പെടുക
+          - img [ref=e263]
+        - link "ടെൻഡറുകളും ജോലികളും" [ref=e265] [cursor=pointer]:
+          - /url: /tenders/
+  - contentinfo [ref=e266]:
+    - generic [ref=e268]:
+      - generic [ref=e269]:
+        - generic [ref=e270]:
+          - img "Kerala HVIC Foundation" [ref=e272]
+          - generic [ref=e273]: Kerala HVIC
+        - paragraph [ref=e274]: നൂതന നയങ്ങളിലൂടെയും കൃത്യതയാർന്ന എഞ്ചിനീയറിങ്ങിലൂടെയും സുസ്ഥിരവും ഹൈഡ്രജൻ അധിഷ്ഠിതവുമായ ആവാസവ്യവസ്ഥയിലേക്കുള്ള പരിവർത്തനത്തിന് നേതൃത്വം നൽകുന്നു.
+        - paragraph [ref=e275]: © 2026 Kerala HVIC Foundation · കേരള സർക്കാർ · ANERT
+      - generic [ref=e276]:
+        - generic [ref=e277]:
+          - heading "തന്ത്രം" [level=4] [ref=e278]
+          - list [ref=e279]:
+            - listitem [ref=e280]:
+              - link "രൂപരേഖ" [ref=e281] [cursor=pointer]:
+                - /url: /programmes/
+            - listitem [ref=e282]:
+              - link "നയ ചട്ടക്കൂട്" [ref=e283] [cursor=pointer]:
+                - /url: /about/
+        - generic [ref=e284]:
+          - heading "ആവാസവ്യവസ്ഥ" [level=4] [ref=e285]
+          - list [ref=e286]:
+            - listitem [ref=e287]:
+              - link "പദ്ധതികൾ" [ref=e288] [cursor=pointer]:
+                - /url: /gallery/
+            - listitem [ref=e289]:
+              - link "വാർത്തകളും ESG-യും" [ref=e290] [cursor=pointer]:
+                - /url: /news/
+        - generic [ref=e291]:
+          - heading "ബന്ധപ്പെടുക" [level=4] [ref=e292]
+          - list [ref=e293]:
+            - listitem [ref=e294]:
+              - link "ടെൻഡറുകളും ജോലികളും" [ref=e295] [cursor=pointer]:
+                - /url: /tenders/
+            - listitem [ref=e296]:
+              - link "അന്വേഷണങ്ങൾ" [ref=e297] [cursor=pointer]:
+                - /url: /contact/
+        - generic [ref=e298]:
+          - link "info@keralahvic.org" [ref=e299] [cursor=pointer]:
+            - /url: mailto:info@keralahvic.org
+          - link "+91 471 233 3124" [ref=e300] [cursor=pointer]:
+            - /url: tel:+91 471 233 3124
+  - alert [ref=e301]
