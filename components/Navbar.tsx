@@ -52,31 +52,31 @@ export default function Navbar() {
             scrolled ? "h-16" : "h-20"
           }`}
         >
-          <Link href="/" className="flex items-center gap-2.5">
+          <Link href="/" className="flex shrink-0 items-center gap-2.5">
             <Logo className="h-8 w-8" />
-            <span className="font-display text-xl font-extrabold tracking-tight text-ink">Kerala HVIC</span>
+            <span className="whitespace-nowrap font-display text-xl font-extrabold tracking-tight text-ink">Kerala HVIC</span>
           </Link>
 
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center gap-6 xl:flex">
             {NAV.map((n) => (
-              <Link key={n.href} href={n.href} className="text-[15px] font-medium text-ink/60 transition-colors hover:text-primary">
+              <Link key={n.href} href={n.href} className="whitespace-nowrap text-[15px] font-medium text-ink/60 transition-colors hover:text-primary">
                 {n.label}
               </Link>
             ))}
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex shrink-0 items-center gap-3">
             <LangToggle className="hidden sm:inline-flex" />
-            <Link href="/login" className="hidden text-sm font-semibold text-ink/70 transition-colors hover:text-primary md:inline-block">
+            <Link href="/login" className="hidden whitespace-nowrap text-sm font-semibold text-ink/70 transition-colors hover:text-primary md:inline-block">
               {t.nav.signIn}
             </Link>
-            <Link href="/contact" className="btn-primary hidden rounded-full bg-primary px-7 py-2.5 text-sm font-semibold text-white hover:opacity-90 sm:inline-block">
+            <Link href="/contact" className="btn-primary hidden whitespace-nowrap rounded-full bg-primary px-7 py-2.5 text-sm font-semibold text-white hover:opacity-90 sm:inline-block">
               {t.nav.connect}
             </Link>
             <button
               aria-label="Open menu"
               onClick={() => setOpen(true)}
-              className="grid h-10 w-10 place-items-center rounded-full text-ink transition-colors hover:bg-card md:hidden"
+              className="grid h-10 w-10 place-items-center rounded-full text-ink transition-colors hover:bg-card xl:hidden"
             >
               <IconMenu className="h-5 w-5" />
             </button>
