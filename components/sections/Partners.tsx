@@ -1,7 +1,11 @@
+"use client";
+
 import { PARTNERS } from "@/lib/content";
 import Reveal from "@/components/ui/Reveal";
+import { useT } from "@/lib/i18n";
 
 export default function Partners() {
+  const t = useT();
   // duplicate the list so the -50% translate loops seamlessly
   const row = [...PARTNERS, ...PARTNERS];
 
@@ -10,7 +14,7 @@ export default function Partners() {
       <div className="mx-auto max-w-[1280px] px-6">
         <Reveal>
           <p className="text-center label-caps text-[10px] text-ink/40">
-            Built with Kerala&apos;s leading institutions
+            {t.partners.built}
           </p>
         </Reveal>
       </div>

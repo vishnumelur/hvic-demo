@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import { IconArrowRight } from "@/components/ui/Icons";
+import { useT } from "@/lib/i18n";
 
 export default function Hero() {
+  const t = useT();
   return (
     <section className="hero-glow relative flex min-h-screen items-center overflow-hidden pt-20">
       <div className="mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-12 px-6 lg:grid-cols-2 lg:gap-16">
@@ -9,20 +13,17 @@ export default function Hero() {
         <div className="z-10 py-16 lg:py-24">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/10 bg-primary/5 px-4 py-1.5 text-primary">
             <span className="pulse-dot h-1.5 w-1.5 rounded-full bg-primary" />
-            <span className="label-caps text-[10px]">Energy Innovation Leader 2026</span>
+            <span className="label-caps text-[10px]">{t.hero.badge}</span>
           </div>
 
-          <h1 className="mt-7 font-display text-[clamp(2.75rem,7vw,5rem)] text-ink">
-            Powering
-            <br />
-            <span className="accent-italic">Hydrogen</span>
-            <br />
-            Innovation
+          <h1 className="mt-7 font-display text-[clamp(2.5rem,7vw,5rem)] leading-tight text-ink">
+            {t.hero.lead && <>{t.hero.lead} </>}
+            <span className="accent-italic">{t.hero.accent}</span>{" "}
+            {t.hero.tail}
           </h1>
 
-          <p className="mt-7 max-w-lg text-lg leading-relaxed text-muted/90 sm:text-xl">
-            Architecting a zero-carbon economy through precision engineering and world-scale
-            hydrogen infrastructure. Kerala&apos;s gateway to the future of clean energy.
+          <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted/90 sm:text-xl">
+            {t.hero.body}
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-4">
@@ -30,14 +31,14 @@ export default function Hero() {
               href="/programmes"
               className="btn-primary premium-shadow inline-flex items-center gap-2 rounded-2xl bg-ink px-7 py-4 font-semibold text-white"
             >
-              Explore Strategy
+              {t.hero.explore}
               <IconArrowRight className="h-5 w-5" />
             </Link>
             <Link
               href="/about"
               className="glass-card rounded-2xl px-7 py-4 font-medium text-ink transition-colors hover:bg-white"
             >
-              Technical Specs
+              {t.hero.specs}
             </Link>
           </div>
         </div>
@@ -52,21 +53,19 @@ export default function Hero() {
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-bg/30 via-transparent to-transparent" />
 
-            {/* Floating callout */}
             <div className="glass-card absolute right-6 top-6 animate-float rounded-3xl p-5 sm:right-8 sm:top-8">
               <div className="font-display text-3xl font-extrabold text-primary">94.2%</div>
-              <div className="label-caps mt-0.5 text-[10px] text-ink/55">Grid Purity</div>
+              <div className="label-caps mt-0.5 text-[10px] text-ink/55">{t.hero.gridPurity}</div>
             </div>
 
             <div className="glass-card absolute bottom-6 left-6 rounded-2xl px-4 py-3 sm:bottom-8 sm:left-8">
               <div className="flex items-center gap-2">
                 <span className="pulse-dot h-2 w-2 rounded-full bg-accent" />
-                <span className="text-sm font-semibold text-ink">Statewide H₂ corridor · Live</span>
+                <span className="text-sm font-semibold text-ink">{t.hero.corridor}</span>
               </div>
             </div>
           </div>
 
-          {/* Soft decorative glows */}
           <div className="absolute -bottom-16 -left-10 -z-10 h-64 w-64 rounded-full bg-accent/20 blur-[120px]" />
           <div className="absolute -top-16 -right-10 -z-10 h-72 w-72 rounded-full bg-primary/10 blur-[140px]" />
         </div>

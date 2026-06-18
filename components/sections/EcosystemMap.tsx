@@ -1,10 +1,14 @@
+"use client";
+
 import { HUBS } from "@/lib/content";
 import Reveal from "@/components/ui/Reveal";
+import { useT } from "@/lib/i18n";
 
 const KERALA_PATH =
   "M40 6 C33 16 28 26 31 37 C33 45 27 53 33 63 C38 71 40 82 48 92 C54 100 56 112 64 124 C71 114 71 101 67 91 C63 81 65 71 61 61 C57 53 59 43 53 35 C49 27 51 16 45 7 Z";
 
 export default function EcosystemMap() {
+  const t = useT();
   // node coords in a 100 x 130 viewBox
   const nodes = HUBS.map((h) => ({ ...h, cx: h.x, cy: h.y * 1.3 }));
   const route = nodes.map((n, i) => `${i === 0 ? "M" : "L"}${n.cx} ${n.cy}`).join(" ");
@@ -17,20 +21,19 @@ export default function EcosystemMap() {
             <div className="absolute -right-10 -top-10 h-56 w-56 rounded-full bg-accent/10 blur-3xl" />
             <div className="relative grid items-center gap-8 lg:grid-cols-12">
               <div className="lg:col-span-7">
-                <p className="label-caps text-primary">Live Network</p>
+                <p className="label-caps text-primary">{t.map.kicker}</p>
                 <h2 className="mt-2 font-display text-3xl font-extrabold tracking-tight text-ink sm:mt-3 sm:text-4xl lg:text-5xl">
-                  Ecosystem Map
+                  {t.map.title}
                 </h2>
                 <p className="mt-3 max-w-md text-base leading-relaxed text-muted sm:mt-5 sm:text-lg">
-                  Live distribution of hydrogen hubs and refuelling nodes across Kerala — from
-                  Kannur to Thiruvananthapuram.
+                  {t.map.intro}
                 </p>
 
                 <div className="mt-6 grid grid-cols-3 gap-3">
                   {[
-                    ["12", "Hubs"],
-                    ["7", "Districts"],
-                    ["100%", "Renewable"],
+                    ["12", t.map.hubs],
+                    ["7", t.map.districts],
+                    ["100%", t.map.renewable],
                   ].map(([v, l]) => (
                     <div key={l} className="rounded-xl bg-white/55 px-3 py-2.5">
                       <div className="font-display text-xl font-extrabold text-ink sm:text-2xl">{v}</div>
@@ -66,7 +69,7 @@ export default function EcosystemMap() {
                     ))}
                   </svg>
                   <span className="absolute bottom-2 right-2 rounded-full bg-white/70 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-primary backdrop-blur-md">
-                    Kerala
+                    {t.map.kerala}
                   </span>
                 </div>
               </div>

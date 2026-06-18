@@ -1,14 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import { ORG } from "@/lib/content";
 import Logo from "@/components/ui/Logo";
-
-const COLS: { head: string; links: [string, string][] }[] = [
-  { head: "Strategy", links: [["Roadmap", "/programmes"], ["Policy Framework", "/about"]] },
-  { head: "Ecosystem", links: [["Projects", "/gallery"], ["News & ESG", "/news"]] },
-  { head: "Contact", links: [["Tenders & Careers", "/tenders"], ["Inquiries", "/contact"]] },
-];
+import { useT } from "@/lib/i18n";
 
 export default function Footer() {
+  const t = useT();
   return (
     <footer className="border-t border-line bg-bg">
       <div className="mx-auto max-w-[1280px] px-6 py-20">
@@ -20,24 +18,21 @@ export default function Footer() {
                 Kerala HVIC
               </span>
             </div>
-            <p className="max-w-sm text-sm leading-relaxed text-muted/80">
-              Leading the transition to a sustainable, hydrogen-powered ecosystem through
-              innovative policy and precision engineering.
-            </p>
+            <p className="max-w-sm text-sm leading-relaxed text-muted/80">{t.footer.tagline}</p>
             <p className="label-caps pt-2 text-[10px] text-ink/40">
-              © {new Date().getFullYear()} Kerala HVIC Foundation · Govt. of Kerala · ANERT
+              © {new Date().getFullYear()} Kerala HVIC Foundation · {t.footer.govt}
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-8 md:col-span-7 md:grid-cols-3">
-            {COLS.map((c) => (
+            {t.footer.cols.map((c) => (
               <div key={c.head} className="space-y-4">
                 <h4 className="label-caps text-[10px] text-ink/45">{c.head}</h4>
                 <ul className="space-y-2.5 text-sm font-medium">
-                  {c.links.map(([label, href]) => (
-                    <li key={label}>
-                      <Link href={href} className="text-muted transition-colors hover:text-primary">
-                        {label}
+                  {c.links.map((l) => (
+                    <li key={l.href + l.label}>
+                      <Link href={l.href} className="text-muted transition-colors hover:text-primary">
+                        {l.label}
                       </Link>
                     </li>
                   ))}

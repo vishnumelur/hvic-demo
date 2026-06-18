@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { STATS } from "@/lib/content";
 import Reveal from "@/components/ui/Reveal";
+import { useT } from "@/lib/i18n";
 
 function Counter({ value }: { value: number }) {
   const [n, setN] = useState(0);
@@ -38,19 +39,20 @@ function Counter({ value }: { value: number }) {
 }
 
 export default function Stats() {
+  const t = useT();
   return (
     <section className="bg-white py-16 sm:py-24 lg:py-28">
       <div className="mx-auto max-w-[1280px] px-6">
         <div className="mb-8 flex flex-col items-start justify-between gap-5 sm:mb-12 md:flex-row md:items-end">
           <div>
-            <p className="label-caps text-primary">Precision Data</p>
+            <p className="label-caps text-primary">{t.stats.kicker}</p>
             <h2 className="mt-3 font-display text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
-              Ecosystem Metrics
+              {t.stats.title}
             </h2>
           </div>
           <div className="flex items-center gap-2 rounded-full border border-line bg-card px-4 py-2">
             <span className="pulse-dot h-2 w-2 rounded-full bg-primary" />
-            <span className="label-caps text-[10px] text-muted">Live Pulse</span>
+            <span className="label-caps text-[10px] text-muted">{t.stats.live}</span>
           </div>
         </div>
 
@@ -65,8 +67,8 @@ export default function Stats() {
                 </div>
                 {/* Label + (desktop) description */}
                 <div className="min-w-0 flex-1 lg:mt-3 lg:flex-none">
-                  <div className="font-display text-base font-bold text-ink lg:text-lg">{s.label}</div>
-                  <p className="mt-1.5 hidden text-sm leading-relaxed text-muted/70 lg:block">{s.sub}</p>
+                  <div className="font-display text-base font-bold text-ink lg:text-lg">{t.stats.items[i].label}</div>
+                  <p className="mt-1.5 hidden text-sm leading-relaxed text-muted/70 lg:block">{t.stats.items[i].sub}</p>
                 </div>
               </div>
             </Reveal>

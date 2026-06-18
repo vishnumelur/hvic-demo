@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Hanken_Grotesk, Fraunces } from "next/font/google";
+import { Hanken_Grotesk, Fraunces, Noto_Sans_Malayalam } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import SiteChrome from "@/components/SiteChrome";
 import { AuthProvider } from "@/lib/auth";
+import { LanguageProvider } from "@/lib/i18n";
 
 const hanken = Hanken_Grotesk({
   variable: "--font-hanken",
@@ -18,6 +19,13 @@ const fraunces = Fraunces({
   display: "swap",
   style: ["italic", "normal"],
   weight: ["400", "500", "600"],
+});
+
+const malayalam = Noto_Sans_Malayalam({
+  variable: "--font-malayalam",
+  subsets: ["malayalam"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -46,7 +54,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${hanken.variable} ${fraunces.variable} antialiased`}>
+    <html lang="en" className={`${hanken.variable} ${fraunces.variable} ${malayalam.variable} antialiased`}>
       <head>
         {/* Progressive enhancement: flag JS before paint so scroll-reveal
             content is hidden-then-animated only when JS runs. Without JS the
@@ -61,9 +69,11 @@ export default function RootLayout({
       </head>
       <body>
         <AuthProvider>
-          <SmoothScroll>
-            <SiteChrome>{children}</SiteChrome>
-          </SmoothScroll>
+          <LanguageProvider>
+            <SmoothScroll>
+              <SiteChrome>{children}</SiteChrome>
+            </SmoothScroll>
+          </LanguageProvider>
         </AuthProvider>
       </body>
     </html>

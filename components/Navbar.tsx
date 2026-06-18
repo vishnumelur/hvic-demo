@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { NAV } from "@/lib/content";
+import { useT } from "@/lib/i18n";
 import Logo from "@/components/ui/Logo";
+import LangToggle from "@/components/ui/LangToggle";
 import {
   IconAtom, IconRoute, IconImage, IconNews, IconBriefcase, IconMail,
   IconUser, IconChevronRight, IconClose, IconMenu,
@@ -19,6 +20,8 @@ const NAV_ICONS: Record<string, (p: { className?: string }) => React.ReactElemen
 };
 
 export default function Navbar() {
+  const t = useT();
+  const NAV = t.nav.items;
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -63,11 +66,12 @@ export default function Navbar() {
           </nav>
 
           <div className="flex items-center gap-3">
+            <LangToggle className="hidden sm:inline-flex" />
             <Link href="/login" className="hidden text-sm font-semibold text-ink/70 transition-colors hover:text-primary md:inline-block">
-              Sign In
+              {t.nav.signIn}
             </Link>
             <Link href="/contact" className="btn-primary hidden rounded-full bg-primary px-7 py-2.5 text-sm font-semibold text-white hover:opacity-90 sm:inline-block">
-              Connect
+              {t.nav.connect}
             </Link>
             <button
               aria-label="Open menu"
@@ -90,17 +94,20 @@ export default function Navbar() {
               <Logo className="h-8 w-8" />
               <span className="font-display text-xl font-extrabold tracking-tight text-ink">Kerala HVIC</span>
             </Link>
-            <button
-              aria-label="Close menu"
-              onClick={() => setOpen(false)}
-              className="grid h-10 w-10 place-items-center rounded-full border border-line bg-white text-ink"
-            >
-              <IconClose className="h-5 w-5" />
-            </button>
+            <div className="flex items-center gap-2">
+              <LangToggle />
+              <button
+                aria-label="Close menu"
+                onClick={() => setOpen(false)}
+                className="grid h-10 w-10 place-items-center rounded-full border border-line bg-white text-ink"
+              >
+                <IconClose className="h-5 w-5" />
+              </button>
+            </div>
           </div>
 
           <div className="relative flex-1 overflow-y-auto px-5 pb-4">
-            <p className="animate-rise mb-2 px-2 label-caps text-[10px] text-muted/50">Navigate</p>
+            <p className="animate-rise mb-2 px-2 label-caps text-[10px] text-muted/50">{t.nav.navigate}</p>
             <nav className="animate-rise overflow-hidden rounded-3xl border border-line bg-white premium-shadow" style={{ animationDelay: "40ms" }}>
               <div className="divide-y divide-line">
                 {NAV.map((n) => {
@@ -133,7 +140,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className="btn-primary flex w-full items-center justify-center gap-2 rounded-2xl bg-primary py-4 font-semibold text-white"
             >
-              <IconUser className="h-5 w-5" /> Sign In
+              <IconUser className="h-5 w-5" /> {t.nav.signIn}
             </Link>
             <div className="flex items-center justify-center gap-2 pt-1 text-xs text-muted">
               <IconMail className="h-3.5 w-3.5 text-primary" />
