@@ -75,12 +75,12 @@ export default function TendersPage() {
                         </p>
                       </div>
 
-                      {/* Right — action buttons */}
-                      <div className="flex shrink-0 flex-wrap items-center gap-3">
+                      {/* Right — action buttons (inline on every width) */}
+                      <div className="flex w-full shrink-0 items-center gap-3 lg:w-auto">
                         {/* Download outline button */}
                         <a
                           href="#"
-                          className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-primary hover:text-primary"
+                          className="flex flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-full border border-line bg-white px-4 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-primary hover:text-primary lg:flex-none lg:px-5"
                         >
                           <IconDownload className="h-4 w-4" />
                           Download
@@ -89,7 +89,7 @@ export default function TendersPage() {
                         {/* Primary CTA */}
                         <a
                           href="#"
-                          className="btn-primary inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white"
+                          className="btn-primary flex flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-white lg:flex-none lg:px-5"
                         >
                           {item.type === "Career" ? "Apply" : "Submit bid"}
                           <IconArrowRight className="h-4 w-4" />
