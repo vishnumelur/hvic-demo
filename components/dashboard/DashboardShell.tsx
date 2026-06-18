@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import Logo from "@/components/ui/Logo";
@@ -127,6 +127,16 @@ export default function DashboardShell({ children }: { children: React.ReactNode
   const router = useRouter();
   const { user, logout } = useAuth();
   const [drawer, setDrawer] = useState(false);
+
+  // Lock body scroll while the mobile drawer is open. On mobile this also
+  // stabilises the viewport so the fixed overlay covers the full screen
+  // (otherwise the dynamic browser chrome leaves an uncovered strip).
+  useEffect(() => {
+    document.body.style.overflow = drawer ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [drawer]);
 
   const current = DASH_NAV.find((n) => n.href === pathname) ?? DASH_NAV[0];
 
