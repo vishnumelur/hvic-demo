@@ -6,7 +6,7 @@ import { NAV } from "@/lib/content";
 import Logo from "@/components/ui/Logo";
 import {
   IconAtom, IconRoute, IconImage, IconNews, IconBriefcase, IconMail,
-  IconUser, IconArrowRight, IconChevronRight, IconClose, IconMenu,
+  IconUser, IconChevronRight, IconClose, IconMenu,
 } from "@/components/ui/Icons";
 
 const NAV_ICONS: Record<string, (p: { className?: string }) => React.ReactElement> = {
@@ -110,12 +110,12 @@ export default function Navbar() {
                       key={n.href}
                       href={n.href}
                       onClick={() => setOpen(false)}
-                      className="group flex items-center gap-4 px-4 py-4 transition-colors hover:bg-card"
+                      className="group flex items-center gap-4 px-4 py-3 transition-colors hover:bg-card"
                     >
-                      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-card text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-card text-primary transition-colors group-hover:bg-primary group-hover:text-white">
                         <Icon className="h-[18px] w-[18px]" />
                       </span>
-                      <span className="flex-1 font-display text-lg font-bold tracking-tight text-ink">{n.label}</span>
+                      <span className="flex-1 font-display text-base font-bold tracking-tight text-ink">{n.label}</span>
                       <IconChevronRight className="h-5 w-5 text-muted/40 transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
                     </Link>
                   );
@@ -131,16 +131,9 @@ export default function Navbar() {
             <Link
               href="/login"
               onClick={() => setOpen(false)}
-              className="flex w-full items-center justify-center gap-2 rounded-2xl border border-line bg-white py-3.5 font-semibold text-ink transition-colors hover:border-primary hover:text-primary"
-            >
-              <IconUser className="h-5 w-5" /> Sign In
-            </Link>
-            <Link
-              href="/contact"
-              onClick={() => setOpen(false)}
               className="btn-primary flex w-full items-center justify-center gap-2 rounded-2xl bg-primary py-4 font-semibold text-white"
             >
-              Connect <IconArrowRight className="h-5 w-5" />
+              <IconUser className="h-5 w-5" /> Sign In
             </Link>
             <div className="flex items-center justify-center gap-2 pt-1 text-xs text-muted">
               <IconMail className="h-3.5 w-3.5 text-primary" />
